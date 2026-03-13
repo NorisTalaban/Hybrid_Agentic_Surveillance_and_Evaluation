@@ -1,0 +1,173 @@
+RAG KNOWLEDGE BASE — What Is Escalation? Measuring Crisis Dynamics with Events Data
+Source: Douglass, Gartzke, Lindsay, Gannon & Scherer (2024), arXiv:2402.03340v1
+Universities: UC San Diego, Georgia Tech, Vanderbilt
+================================================================================
+
+RELEVANCE FOR CRISIS MONITOR v2.1
+───────────────────────────────────
+→ ANALYST agent: 140 ICBe behaviors classified as escalatory/de-escalatory, 6 trajectory clusters, case studies
+→ SCANNER agent: which observable actions lengthen vs shorten crises, historical analogies
+Primary agent: ANALYST | recommended k-retrieval: 5
+
+COVERAGE MAP
+───────────────
+[~] Psychological dynamics of crowds → ABSENT as a direct topic; indirectly present via spiral model and misperception
+[~] Social identity and collective behavior → ABSENT as social psychology; present as collective state behavior
+[✓] Geopolitical risk indices (GPR) → PRESENT — empirical measurement of escalation via ICBe dataset on 475 crises
+[✓] Escalation trajectories and crisis clusters → CORE TOPIC — predictive model of crisis duration + 6 temporal clusters
+[✓] Historical indicators of geopolitical deterioration → PRESENT — 140 behaviors classified as escalatory/de-escalatory + case studies
+
+================================================================================
+SECTION 1 — FUNDAMENTAL DEFINITIONS
+================================================================================
+
+C01 | Definition of international crisis
+Source: Douglass et al., Sec.2.1 | Brecher & Wilkenfeld (1982, 1997)
+A crisis is a period of "destructive interaction with a heightened probability of military hostilities that destabilizes relations between states or challenges the structure of the international system." The ICB project has documented 496 crises since 1918. Formal model: Markov states with two latent states — Stability (S) and Crisis (C). The latent state is partially observed through the current and historical behaviors of the actors. Behaviors appear both as proxies for the dependent variable (crisis state) and as potential causes, creating conceptual confusion between measurement, explanation, prediction, and prescription.
+Keywords: international crisis, ICB, Brecher, Wilkenfeld, Markov states, stability, military hostilities
+
+C02 | Definition of escalation/de-escalation
+Source: Douglass et al., Sec.2.3
+Escalation = increase in the probability that a crisis continues (Crisis→Crisis transition). De-escalation = increase in the probability of a Crisis→Stability transition. Operationalization: "remaining time until the end of the crisis" as a directly interpretable proxy. A behavior that increases expected duration is escalatory; one that shortens it is de-escalatory. This definition is NOT based on pre-decided judgments about behaviors — it allows that even aggressive/violent acts may shorten a crisis.
+Keywords: escalation, de-escalation, crisis duration, transition, proxy, remaining time
+
+C03 | ICBe taxonomy of behaviors (Table 1)
+Source: Douglass et al., Sec.2.2, Table 1
+140 behaviors classified into 4 categories: (1) ARMED ESCALATORY: raise alert, mobilization, fortify, exercise, weapons test, deployment, show of force, blockade, border violation, no-fly zone, battle, attack, invasion/occupation, bombardment, declaration of war, annexation, etc. (2) UNARMED UNCOOPERATIVE: break off negotiations, withdraw diplomats, violate treaties, political succession, leave alliance, terminate treaty, end cooperation, propaganda, imprisonment, expulsion. (3) ARMED DE-ESCALATORY: lower alert, demobilization, withdrawal, ceasefire, surrender, declaration of peace, decolonization. (4) UNARMED COOPERATIVE: discussion, meeting, mediation, sign agreement, resolve dispute, economic/military/intelligence cooperation, humanitarian aid, release prisoners, cede territory.
+Keywords: ICBe, taxonomy, behaviors, escalatory, de-escalatory, cooperative, uncooperative, 140 actions
+
+================================================================================
+SECTION 2 — COMPETING THEORETICAL MODELS
+================================================================================
+
+C04 | Spiral Model
+Source: Douglass et al., Sec.2.4 | Jervis (1976, 1978) | Herz (1950)
+The spiral model sees tough language and aggressive military posture as inflammatory: they exacerbate security dilemmas and increase the risk of war. Threats alert the adversary, weaken defenses, and trigger anticipatory reactions. A nation threatened with retaliation is less likely to yield due to reputational costs (domestic, international) or the psychological burden of not fighting. Threats can even trigger actions where there would have been none. In this model, escalation weights and crisis indicators are highly correlated (aggressive action → more aggression).
+Keywords: spiral model, Jervis, security dilemma, tit-for-tat, provocation, symmetric escalation
+
+C05 | Deterrence Model
+Source: Douglass et al., Sec.2.4 | Schelling (1966) | Powell (1990) | Brodie (1959)
+Deterrence sees conflict as cost-benefit analysis. If weakness or uncertainty invites conflict, then some of the most typical crisis behaviors serve to restore stability. Deterrence is most effective when threats are clear, plausible, and consequential. It uses threats to impose costs/risks on the adversary in the hope that the prospect of damage discourages aggression. In this model, some weights are "inverted" relative to the spiral model (aggressive action → the adversary yields).
+Keywords: deterrence, Schelling, Powell, cost-benefit, credible threats, signaling, resolve
+
+C06 | Bargaining Model
+Source: Douglass et al., Sec.2.4 | Fearon (1995) | Wagner (2000, 2007)
+Actors are strictly better off reaching a favorable agreement rather than fighting (which destroys the bargaining surplus), but have incentives to misrepresent capabilities and intentions to obtain better deals. There is a crucial endogenous role for bargaining moves that can resolve OR exacerbate informational problems. Neither the spiral nor the deterrence model explicitly incorporates process contingency. Key finding: this model receives the most support from empirical data.
+Keywords: bargaining model, Fearon, Wagner, surplus, information, misrepresentation, contingency
+
+C07 | The measurement problem in escalation
+Source: Douglass et al., Sec.2.5
+Conventional datasets code outcomes OR events, aggregating processes into discrete points. But escalation is a PROCESS — a series of relationships linking events over time that are sequentially significant. There is missing information on what preceded and precipitated the outcomes of interest. Two types of data: conflict data (outcomes, such as COW/MIDs) and events data (event sequences, such as CAMEO, ACLED). The problem with events data: it is unknown which prior events make subsequent ones more or less likely. The tendency is to "bin" events into counts per period, losing sequential information.
+Keywords: measurement problem, conflict data, events data, COW, MIDs, CAMEO, ACLED, process, sequence
+
+================================================================================
+SECTION 3 — DATA AND METHOD
+================================================================================
+
+C08 | ICBe + ICBeLLM Dataset
+Source: Douglass et al., Sec.3
+Data: 475 crises from the ICB v12 project. Actions coded with International Crisis Behavior Events (ICBe) v1.1 (expert human coders) + ICBeLLM (LLM with engineered prompts). The merge increases observations by 65% (from 9,358 to 15,487 events). Unit: crisis-sentence-actor set. Only details confirmed by at least 2 experts OR by 1 expert + LLM. Each crisis has between 2 and 68 time-steps (median 13). Total: 7,126 crisis-time steps. First international dataset to code the COMPLETE SEQUENCE of actions and declarations necessary to capture escalation as a process.
+Keywords: ICBe, ICBeLLM, 475 crises, LLM, event coding, time-step, sequence, mixed human-machine
+
+C09 | Measurement strategy: time until the end of the crisis
+Source: Douglass et al., Sec.3.3 + 4.2
+Outcome: number of time-steps remaining until the end of the crisis. For each of the 140 behaviors, the number of steps since it was last observed is calculated (0 = current, 1 = one step ago, etc.; 100 = never observed). Model: gradient-boosted trees (LightGBM), L1 optimization, 10-fold cross-validation at the crisis level. Feature contributions via SHAP values: local decomposition of each behavior's contribution to the prediction. Result: directly interpretable measure of the latent escalatory/de-escalatory nature of each action.
+Keywords: LightGBM, SHAP, gradient boosted trees, cross-validation, feature contribution, duration prediction
+
+================================================================================
+SECTION 4 — KEY EMPIRICAL RESULTS
+================================================================================
+
+C10 | Temporal position of behaviors in crises (Figure 1)
+Source: Douglass et al., Sec.4.1, Figure 1
+Behaviors align over time in a way that mirrors prior beliefs. Escalatory/uncooperative actions (red) appear EARLIER in crises; de-escalatory/cooperative actions (green) appear LATER. The two groups are nearly linearly separable. Motives: motivations for conflict appear early (territory, regime change, preemption); perceptions of defeat/crisis end appear late. Speech: accusations, ultimatums, threats = early; promises, offers, acceptances = late. Details (troop numbers) = early; consequences (territorial changes) = late.
+Keywords: temporal position, early behaviors, late behaviors, linear separability, ICBe ontology
+
+C11 | What lengthens vs shortens a crisis (Figure 2)
+Source: Douglass et al., Sec.4.2, Figure 2
+SHORTEN THE CRISIS (empirical de-escalators): perception of victory or defeat, surrender, withdrawal from an area, large territorial gain, battles/clashes, attacks, mediation, unconditional offer, disapproval, rejection, acceptance. LENGTHEN THE CRISIS (empirical escalators): formation of a new military alliance, political succession, declaration of war, third party entering war, institutional change, mobilization, weapons test, deployment of tens of thousands of troops, breaking off negotiations, ultimatum, threats, accusations, territorial claims. The effect decays over time: recent events are more informative than distant ones.
+Keywords: SHAP values, crisis duration, military alliance, surrender, withdrawal, mediation, declaration of war, temporal decay
+
+C12 | Empirical support for the bargaining model
+Source: Douglass et al., Sec.4.2 + 6
+The bargaining model receives the greatest support. Large violent shocks are stabilizing because they provide information to both parties about who would win if the conflict continued. Cooperative actions that signal major realignments (new alliances) EXTEND crises because they create uncertainty. Escalatory/uncooperative actions that kill and destroy but provide information are associated with crisis termination. The spiral model and deterrence are not supported in their classical forms.
+Keywords: bargaining model, informational shocks, uncertainty, alliances, resolutive violence, failed deterrence
+
+================================================================================
+SECTION 5 — CRISIS TRAJECTORY CLUSTERS
+================================================================================
+
+C13 | 6 trajectory clusters (Figure 4)
+Source: Douglass et al., Sec.5, Figure 4
+Clustering of predicted trajectories of 475 crises into 6 patterns: (1) Crises that resolve almost immediately. (2) Crises that begin to resolve but then revert to high hostility levels. (3) Crises that step down (stair-step down). (4) Crises that step up over time (stair-step up). (5-6) Intermediate variants with alternating phases of fighting and bargaining. Interpretation: evidence of intermittent rounds of fighting and bargaining within crises. The measurement scale is crucial: some crises have internal episodes and pauses.
+Keywords: clusters, trajectories, 6 patterns, stair-step, immediate resolution, reversion, episodes
+
+C14 | Case studies: Cuba 1962, Gulf War 1990, Crimea-Donbas 2014
+Source: Douglass et al., Sec.5, Figure 3
+CUBA 1962: U-shaped curve — high initial intensity with reversion at the end. Discovery of fact (Soviet missiles) lengthens the crisis; positive sequence (withdrawal, mediation, mediation, withdrawal) shortens it; U-2 shootdown re-extends it; formal agreement signing + withdrawal → expected duration collapses. GULF WAR 1990: three distinct phases — Kuwait invasion, negotiation/brinkmanship, war onset. CRIMEA-DONBAS 2014: intense start then stair-step down with the onset of mediation.
+Keywords: case study, Cuba, Gulf, Crimea, Donbas, U-2, Kuwait, trajectory, phases
+
+================================================================================
+SECTION 6 — THEORETICAL AND POLICY IMPLICATIONS
+================================================================================
+
+C15 | Neither deterrence nor spiral: the complexity of escalation
+Source: Douglass et al., Sec.6
+The classic deterrence vs. spiral debate is "at best largely descriptive and has little predictive value." Deterrence may influence behavior before the crisis manifests (general deterrence), but there is little evidence that immediate deterrence works as predicted — actors do not de-escalate because the adversary has escalated. Rather, states tend to mirror-image: they escalate when the other does, and vice versa. The relationships found are correlations, not causations, but they are sufficient to outline factors associated with de-escalation.
+Keywords: failed deterrence, inadequate spiral, mirror-image, correlation, policy, complexity
+
+C16 | Utility for political decision-makers
+Source: Douglass et al., Sec.4
+For each ongoing crisis, the model identifies the "most valid historical analogies" — past crises with the most similar histories. For each time-step, it updates the prediction given the complete observed history. Even if history does not repeat exactly, knowing the distribution of outcomes among the most similar crises, or knowing that an ongoing crisis has no historical analogues, is in itself useful. It does not allow strong causal recommendations, but gives decision-makers the analytical ability to see how a crisis compares with others.
+Keywords: historical analogies, prediction, decision-makers, time-step, Bayesian updating, analogues
+
+================================================================================
+QUERY → RETRIEVAL MAP
+================================================================================
+
+Q: "What is escalation in international relations?"
+→ C01 + C02 + C03
+
+Q: "Deterrence vs. spiral: which model works?"
+→ C04 + C05 + C06 + C12 + C15
+
+Q: "How is escalation measured empirically?"
+→ C07 + C08 + C09
+
+Q: "Which actions lengthen or shorten a crisis?"
+→ C10 + C11 + C03
+
+Q: "Are there recurring patterns in international crises?"
+→ C13 + C14
+
+Q: "How to use these data for crisis management?"
+→ C16 + C15 + C11
+
+Q: "How are violence and crisis termination connected?"
+→ C12 + C11 + C06
+
+================================================================================
+GLOSSARY
+================================================================================
+
+Escalation = Increase in the probability that a crisis continues; operationalized as lengthening of expected duration
+De-escalation = Increase in the probability of transition from crisis to stability; shortening of expected duration
+ICBe = International Crisis Behavior Events dataset — sequential coding of actions in 475 crises since 1918
+ICBeLLM = Machine-coded version of the ICBe dataset using Large Language Models
+Spiral model = Theory: aggression generates aggression (tit-for-tat) → progressive escalation
+Deterrence model = Theory: credible threats discourage the adversary → aggression produces yielding
+Bargaining model = Theory: conflict is a bargaining failure; violence provides information
+SHAP values = Decomposition of each feature's contribution to the model's prediction
+Time-step = Temporal unit in a crisis, defined as a sentence of the ICB narrative with coded events
+Mirror-imaging = Tendency of states to symmetrically replicate the adversary's behavior
+Stair-step down = Crisis pattern that de-escalates in steps with negotiation phases
+Stair-step up = Crisis pattern that escalates progressively over time
+General deterrence = Effort to discourage the adversary from considering the use of force
+Immediate deterrence = Effort to prevent an actual attack by the adversary
+Informational shock = Violent event that reveals information about who would win, facilitating bargaining
+Cross-validation = Validation strategy that divides the 475 crises into 10 folds without ever mixing the same crisis
+LightGBM = Gradient-boosted trees estimator used for non-parametric prediction of crisis duration
+
+================================================================================
+16 chunks • 6 thematic sections • 16 glossary entries • 7 query-retrieval mappings
+Source: Douglass, Gartzke, Lindsay, Gannon & Scherer (2024), arXiv:2402.03340v1

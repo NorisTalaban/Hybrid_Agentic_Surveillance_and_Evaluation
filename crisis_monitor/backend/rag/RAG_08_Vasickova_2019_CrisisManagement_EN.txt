@@ -1,0 +1,149 @@
+RAG KNOWLEDGE BASE — Crisis Management Process: A Literature Review and Conceptual Integration
+Source: Vašíčková (2019), Acta Oeconomica Pragensia, 27(3-4), 61-77
+DOI: 10.18267/j.aop.628
+================================================================================
+
+RELEVANCE FOR CRISIS MONITOR v2.1
+───────────────────────────────────
+→ VERIFIER agent: PCMP model (pre-crisis → defense & recovery → post-crisis), warning signals, proactive vs reactive approach
+→ ANALYST agent: vulnerability analysis, crisis types (potential → latent → acute)
+Primary agent: VERIFIER | recommended k-retrieval: 3
+
+COVERAGE MAP
+───────────────
+[✗] Psychological dynamics of crowds → ABSENT
+[✗] Social identity and collective behavior → ABSENT (only employee socialization mentioned)
+[✗] Geopolitical risk indices (GPR) → ABSENT — organizational focus, not geopolitical
+[✓] Escalation trajectories and crisis clusters → PRESENT — crisis phases (potential→latent→acute), process models
+[✓] Historical indicators of geopolitical deterioration → PARTIAL — warning signals, vulnerability analysis, key indicators
+
+================================================================================
+SECTION 1 — DEFINITIONS AND PROCESS
+================================================================================
+
+C01 | Definition of crisis management
+Source: Vašíčková, p.61, 64 | Mitroff & Pearson (1993) | Mitroff & Alpaslan (2003)
+Crisis management is a process with related steps and procedures that leads to: early prediction of a potential crisis, identification of the nature of the crisis situation, timely resolution, and facilitation of crisis avoidance. It is a set of approaches, measures, and methods used in situations where normal managerial competencies are no longer sufficient. Objective: minimize the crisis impact or avoid it. All activities must be considered as a permanent continuous process that begins with prevention and ends with organizational learning.
+Keywords: crisis management, process, prevention, prediction, resolution, organizational learning
+
+C02 | Three types of crisis in the process
+Source: Vašíčková, pp.73-74 | Robert & Lajtha (2002) | Zuzák (2009)
+POTENTIAL CRISIS: known as a crisis that can occur in the organization, becomes evident in the form of warning signals. LATENT CRISIS: the potential crisis converts, bringing more threats; if the organization takes timely corrective actions, the consequences will not be significant. ACUTE CRISIS: threatens the organization and its stability, requires inevitable recovery measures. Progression: potential → latent → acute (if not intercepted).
+Keywords: potential crisis, latent crisis, acute crisis, progression, warning signals, interception
+
+================================================================================
+SECTION 2 — REACTIVE VS PROACTIVE APPROACHES
+================================================================================
+
+C03 | Reactive approach
+Source: Vašíčková, pp.65-66 | Loosemore & Hughes (1998) | Zuzak & Königova (2009)
+Set of procedures and principles to bring the organization out of crisis and stabilize it. Algorithm: crisis awareness → identification → crisis management (stopping the crisis) → detailed cause analysis → corrective actions → organizational learning. Does not consider preventive warning signals. If the crisis strikes unexpectedly: short-term measures (production cuts, staff reduction, salary cuts, benefit losses). Risky approach for employees and customers.
+Keywords: reactive, crisis identification, corrective actions, short-term measures, cuts
+
+C04 | Proactive approach
+Source: Vašíčková, pp.66-67 | Mitroff, Pauchant & Shrivastava (1988) | Sahin et al. (2015)
+Identification of the potential crisis begins BEFORE it hits the organization. Activities: systematic analysis of warning signals for early detection; creation of an early warning system; crisis plans and scenarios; crisis team formation; timely and adequate information on potential risks; risk determination. Objective: avoid the crisis or mitigate its consequences. Includes scenario planning as a mechanism for managing future crises (Pollard & Hotho, 2006).
+Keywords: proactive, warning signals, early warning, scenarios, crisis team, prevention, mitigation
+
+C05 | Five approaches by Sahin et al. (2015)
+Source: Vašíčková, pp.66-67, Figure 4
+(1) ESCAPING: very close to proactive, predicts early and finds solutions to avoid the crisis. (2) SOLVING: prediction + clear procedures + environment analysis + crisis viewed as an opportunity for positive change. (3) PROACTIVE: timely information, EWS, plans/scenarios, crisis team. (4) REACTIVE: short-term measures (cuts, layoffs, reductions). (5) INTERACTIVE: evaluation of previous steps, organizational learning, feedback, communication with stakeholders, SWOT/PESTEL.
+Keywords: five approaches, Sahin, escaping, solving, proactive, reactive, interactive, opportunity
+
+================================================================================
+SECTION 3 — PROCESS MODELS ANALYZED
+================================================================================
+
+C06 | Mitroff, Pauchant & Shrivastava (1988) model
+Source: Vašíčková, pp.67-68, Figure 5
+Cyclical process with 4 phases: DETECTION (proactive): probe weaknesses, prepare, simulate disruption, analyze internal/external environment. PREVENTION/PREPARATION (proactive): ensure preparedness. DAMAGE LIMITATION (reactive): isolate and contain the crisis. REPAIR (reactive): short/long-term recovery, return to normalcy. ASSESSMENT: evaluation and learning, expand detection, redesign. Key principle: the more crises a company faces, the better prepared it will be for subsequent ones.
+Keywords: Mitroff, detection, prevention, damage limitation, repair, assessment, cyclical
+
+C07 | Spillan (2000) reactive vs proactive model
+Source: Vašíčková, pp.68-69, Figure 6
+REACTIVE: pre-crisis → CRISIS → crisis response → crisis planning → post-crisis (restructuring, costs, management reform, personnel changes, failure). PROACTIVE: pre-crisis with vulnerability analysis → preparation with crisis planning/scenarios → CRISIS or CRISIS AVOIDED → post-crisis (plan/scenario evaluation, vulnerability review, preparation for another crisis). The process is never completed: after the crisis, plans are revised, vulnerability re-analyzed, and prevention re-planned.
+Keywords: Spillan, reactive, proactive, vulnerability analysis, scenarios, crisis avoided, cycle
+
+C08 | Jaques (2010) relational model
+Source: Vašíčková, pp.69-70, Figure 7
+Two sides: PRE-CRISIS MANAGEMENT (crisis preparedness + crisis prevention) and CRISIS MANAGEMENT (crisis event management + post-crisis management). Pre-crisis: systems/manuals, training/simulations, early warning, issue & risk management. Crisis: crisis recognition, emergency response, system activation, recovery/business resumption. Post-crisis: evaluation/modification, planning process. The model is cyclical — activities are related and integrated clusters that occur simultaneously.
+Keywords: Jaques, pre-crisis, crisis management, preparedness, prevention, recovery, cyclical
+
+C09 | Frýbert (1995) algorithm
+Source: Vašíčková, pp.70-71, Figure 8
+Time-phased stages: Stage of prevention (-3 years) → Identification stage (+1 month) → CRISIS → Resuscitation stage (+2 months): renewal of basic functions → Diagnostic stage (+3 months): assessment of crisis development, decision to act (+ or failure/liquidation) → Consolidation/stabilization stage (+6-12 months): revitalization concept, corrective measures, detailed analysis → Strategy solution stage (1-2 years): development strategy, strategic options, strategy revitalization measures.
+Keywords: Frýbert, algorithm, time-phased stages, prevention, diagnosis, consolidation, strategy
+
+C10 | Valackiene (2011) model
+Source: Vašíčková, pp.71-72, Figure 9
+Four components: ESI (Employee Social Identification), ECE (Effective Communication between Employees), ECC (Effective Crisis Communication), EXMS (Effective Crisis Management Strategy). Emphasis on employee socialization, internal/external communication (stakeholders), CM strategy in phases: crisis prevention program → crisis identification → operational activities → consequence liquidation. Repetitive cycle. Does not directly discuss preparedness mechanisms.
+Keywords: Valackiene, communication, socialization, stakeholders, strategy, cycle
+
+================================================================================
+SECTION 4 — PROPOSED PCMP MODEL
+================================================================================
+
+C11 | Proactive Crisis Management Process (PCMP)
+Source: Vašíčková, pp.72-74, Figure 10
+Integrated model in 3 phases: PRE-CRISIS STAGE: vulnerability analysis → warning signal identification → crisis plans/scenarios → simulations, employee training → crisis team/manager + crisis communication → [potential crisis → latent]. DEFENSE & RECOVERY STAGE: CRISIS → identification of crisis sources → restructuring/redesign/reengineering/rescue → [or failure] → HR reform, management reform, strategy modification → [acute crisis]. POST-CRISIS STAGE: CRISIS AVOIDED → crisis situation evaluation → warning signal + procedure evaluation → feedback/learning organization → stakeholder/employee communication, top management declaration → strategy analysis → strategy revitalization → [returns to potential crisis — cycle]. Key aspects: continuous, cyclical process, integrated into strategic management.
+Keywords: PCMP, integrated model, three phases, vulnerability, warning signals, learning, strategy, cyclical
+
+C12 | Synthetic characteristics of proactive crisis management
+Source: Vašíčková, pp.72-73
+(1) Set of methods, approaches, and tools for preventing and eliminating crisis situations and stabilizing organizational functions. (2) Purpose: avoid potential crisis, minimize losses, reduce crisis duration. (3) Permanent evaluation of warning signals is essential. (4) Continuous process of prediction, prevention, preparedness, control, recovery, learning, evaluation. (5) No approach can avoid ALL crises — sometimes one can only eliminate the consequences, mitigate, and manage effectively.
+Keywords: characteristics, proactive, permanent, warning signals, continuous process, limitations
+
+================================================================================
+SECTION 5 — CONNECTIONS WITH STRATEGIC MANAGEMENT
+================================================================================
+
+C13 | CM as part of strategic management
+Source: Vašíčková, p.65 | Gundel (2005) | Khodarahmi (2009) | Preble (1997)
+CM is a significant, often critical, part of strategic management. Common features: consistent analysis of the environment, cooperation with stakeholders, top management activities. Crisis scenarios are both a CM procedure and a central part of the strategic planning process. The strategy must be revitalized after each new crisis. Crisis objectives derive from strategic objectives. Crisis plans must be linked to strategic plans.
+Keywords: strategic management, strategic planning, scenarios, revitalization, objectives
+
+================================================================================
+QUERY → RETRIEVAL MAP
+================================================================================
+
+Q: "What is crisis management and how does it work as a process?"
+→ C01 + C02 + C12
+
+Q: "What is the difference between a reactive and proactive approach?"
+→ C03 + C04 + C05
+
+Q: "What process models exist for crisis management?"
+→ C06 + C07 + C08 + C09 + C10
+
+Q: "How are crisis warning signals identified?"
+→ C04 + C11 + C02
+
+Q: "How to integrate crisis management into strategy?"
+→ C13 + C11 + C09
+
+Q: "What are the phases of the PCMP model?"
+→ C11 + C12
+
+================================================================================
+GLOSSARY
+================================================================================
+
+Crisis management = Process of prediction, prevention, and management of organizational crises
+Reactive approach = Managing the crisis after it has occurred, focus on eliminating consequences
+Proactive approach = Anticipating and preventing the crisis through warning signals and preparedness
+Warning signals = Early signs indicating an approaching potential crisis
+Vulnerability analysis = Analysis of organizational weaknesses to identify crisis risks
+Potential crisis = Crisis that can occur, evidenced by warning signals
+Latent crisis = Potential crisis that converts, bringing increasing threats
+Acute crisis = Crisis that directly threatens organizational stability and survival
+PCMP = Proactive Crisis Management Process — integrated model proposed by the author
+Crisis team = Dedicated group for crisis management with specific competencies
+Organizational learning = Learning from crisis experience to improve future responses
+Scenario planning = Creation of crisis scenarios to prepare preventive responses
+Restructuring = Organizational restructuring as a response to acute crisis
+Reengineering = Radical redesign of organizational processes after a crisis
+Strategy revitalization = Updating the business strategy based on crisis experience
+
+================================================================================
+13 chunks • 5 thematic sections • 15 glossary entries • 6 query-retrieval mappings
+Source: Vašíčková (2019), Acta Oeconomica Pragensia, 27(3-4), 61-77

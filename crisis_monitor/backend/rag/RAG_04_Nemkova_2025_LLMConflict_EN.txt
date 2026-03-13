@@ -1,0 +1,155 @@
+RAG KNOWLEDGE BASE — Do Large Language Models Know Conflict?
+Source: Nemkova, Lingareddy, Ray Choudhury & Albert (2025), arXiv:2505.09852v1
+University: University of North Texas
+================================================================================
+
+RELEVANCE FOR CRISIS MONITOR v2.1
+───────────────────────────────────
+→ SCANNER agent: validates RAG architecture, shows which data improve forecasting, limits of parametric models
+→ All agents: benchmark for realistic expectations of automated forecasting performance
+Primary agent: SCANNER | recommended k-retrieval: 3
+
+COVERAGE MAP
+───────────────
+[✗] Psychological dynamics of crowds → ABSENT
+[✗] Social identity and collective behavior → ABSENT
+[~] Geopolitical risk indices (GPR) → PARTIAL — uses ACLED fatalities + GDELT tone/Goldstein scale as indicators
+[✓] Escalation trajectories and crisis clusters → PRESENT — Escalate/De-escalate/Stable/Peace classification + fatality prediction
+[~] Historical indicators of geopolitical deterioration → PARTIAL — empirical evaluation on 2020-2024, Horn of Africa + Middle East
+
+================================================================================
+SECTION 1 — FRAMEWORK AND DEFINITIONS
+================================================================================
+
+C01 | Objective and task definition
+Source: Nemkova et al., Sec.1
+Question: can LLMs predict the dynamics of violent conflicts? Two settings: (1) PARAMETRIC — the LLM predicts using only knowledge encoded in pre-trained weights, without external data. (2) NON-PARAMETRIC (RAG) — the LLM receives summaries of recent events, structured indicators, and geopolitical developments via Retrieval-Augmented Generation. Dual task: classify the expected direction of violence (Escalate, De-escalate, Stable Conflict, Peace) + estimate the number of fatalities in the forecast period. Period: 2020-2024, regions: Horn of Africa (Ethiopia, Sudan, Somalia) and Middle East (Israel, Iran).
+Keywords: LLM, conflict forecasting, parametric, non-parametric, RAG, escalation, fatalities, early warning
+
+C02 | Data sources
+Source: Nemkova et al., Sec.3.1
+GDELT (Global Database of Events, Language, and Tone): primary source of unstructured information — article URLs, actor codes, tone score, Goldstein Scale (cooperation-conflict proxy). ACLED (Armed Conflict Location and Event Data Project): structured data on actual conflict incidents, including fatalities — used as ground truth. In the RAG setting: average article tone + average Goldstein score + weekly fatality counts from the last 12 weeks.
+Keywords: GDELT, ACLED, Goldstein scale, tone, fatalities, ground truth, structured data
+
+C03 | Labeling system for conflict trends
+Source: Nemkova et al., Sec.3.2 | Croicu & von der Maase (2025)
+Four categories: ESCALATE — increase in violence; DE-ESCALATE — decrease in violence; STABLE CONFLICT — persistent violence without significant change; PEACE/NO CONFLICT — absence or near-absence of violence. Labels are based on fatality slope thresholds. Problem: the Stable/Conflict and Peace classes are much more frequent than Escalate and De-escalate → imbalanced dataset.
+Keywords: labels, Escalate, De-escalate, Stable Conflict, Peace, slope, classification, imbalance
+
+================================================================================
+SECTION 2 — EXPERIMENTAL METHOD
+================================================================================
+
+C04 | Experiment 1: Parametric forecasting (zero-shot)
+Source: Nemkova et al., Sec.3.2
+The LLM generates 1-month forecasts for a given country using ONLY internal knowledge. No access to recent or region-specific data. Must: (1) classify the conflict trend with one of the 4 labels; (2) estimate the expected number of fatalities. Models tested: GPT-4 (via OpenAI API, temperature 0.2) and LLaMA-2-13B-chat (via HuggingFace). Test set: 59 monthly data points per country.
+Keywords: zero-shot, parametric, GPT-4, LLaMA-2, monthly forecast, internal knowledge
+
+C05 | Experiment 2: Forecasting with RAG
+Source: Nemkova et al., Sec.3.2.1
+RAG pipeline: the LLM receives context from the previous 3 months and must predict the next month. Context provided: (1) summary of the most relevant news excerpts (semantic retrieval + summarization via GPT-3.5); (2) average tone of retrieved articles (from GDELT); (3) average Goldstein Scale score (from GDELT); (4) weekly fatality counts from the last 12 weeks (from ACLED). Retrieval: FAISS (Facebook AI Similarity Search). Same labels and metrics as Experiment 1.
+Keywords: RAG, retrieval, FAISS, GPT-3.5, summary, 3 months, context, Goldstein, tone, ACLED
+
+C06 | Evaluation framework
+Source: Nemkova et al., Sec.3.3
+Three types of prediction evaluated: (1) Direct categorical prediction (trend label). (2) Binned fatality prediction (quantile ranges). (3) Label derived from predicted fatalities (e.g., 400 fatalities → Stable Conflict). Metrics: accuracy, precision, recall, F1-score (micro, macro, weighted) for classification; MAE for fatality regression.
+Keywords: evaluation, accuracy, F1, MAE, binned regression, metrics, classification, regression
+
+================================================================================
+SECTION 3 — KEY RESULTS
+================================================================================
+
+C07 | Parametric GPT-4: general patterns but fine-grained limits
+Source: Nemkova et al., Sec.4, Table 1
+GPT-4 zero-shot: high accuracy for class-from-fatalities (e.g., Somalia 0.83), indicating that it encodes useful general patterns from pre-training. But direct categorical classification remains weak: macro-F1 < 0.22 across all countries. Limitations: fine-grained multi-class reasoning insufficient with internal knowledge alone. Predictions capture broad dynamics (peace, stable conflict) but fail on escalation and de-escalation. Fatality MAE: 446 (Ethiopia), 512 (Sudan), 326 (Somalia), 218 (Israel), 176 (Iran).
+Keywords: GPT-4, zero-shot, accuracy, macro-F1, fatalities, general patterns, classification limits
+
+C08 | RAG improves GPT-4 but not uniformly
+Source: Nemkova et al., Sec.4-5, Table 1
+With RAG, GPT-4 improves in: class-from-fatalities (F1-macro Israel: 0.16→0.33), binned regression (F1 Sudan: 0.15→0.35; Israel: 0.00→0.43), fatality MAE (Israel: 218→94; Iran: 176→97). But it does NOT improve uniformly: Somalia worsens in categorical classification; MAE for Ethiopia and Sudan remains stable. The quality of retrieved context is the critical factor: noisy or sparse articles worsen predictions. RAG improves conflict intensity classification but does not always translate into better numerical estimates.
+Keywords: RAG, improvement, GPT-4, Israel, Iran, MAE, context quality, noise
+
+C09 | LLaMA-2: low performance, RAG largely ineffective
+Source: Nemkova et al., Sec.4-5, Table 2
+Parametric LLaMA-2: consistently low performance (accuracy Ethiopia 0.07, Iran 0.05). With RAG: minimal and inconsistent improvements; in some cases worsening (Ethiopia: failed outputs). In selected cases (Somalia, Israel) modest F1 gains. Interpretation: effective non-parametric forecasting requires not only retrieval but also sufficient model capacity to interpret and integrate new information. LLaMA-2 shows potential for resource-constrained environments but significant gaps remain.
+Keywords: LLaMA-2, low performance, RAG ineffective, model capacity, resource-constrained
+
+C10 | Regional variation
+Source: Nemkova et al., Sec.5
+GPT-4 performs better in Sudan, Iran, Ethiopia — consistent F1 improvements with RAG. Somalia and Israel are more volatile — inconsistent article quality, variable event dynamics, weaker historical patterns. The gap between Exp.1 and Exp.2 is NOT uniform across countries or metrics → generalization is region-sensitive. Regional context quality, not a global trend, determines RAG effectiveness.
+Keywords: regional variation, Sudan, Somalia, Israel, generalization, context quality
+
+================================================================================
+SECTION 4 — PARAMETRIC VS NON-PARAMETRIC KNOWLEDGE
+================================================================================
+
+C11 | The knowledge conflict problem in LLMs
+Source: Nemkova et al., Sec.2 | Xu et al. (2024) | Wu et al. (2024)
+"Knowledge conflict" phenomenon: parametric knowledge (pre-training) can contradict non-parametric information (retrieved at inference time). Some LLMs show bias toward parametric knowledge even when relevant external context is provided via RAG. This is particularly critical for conflict forecasting where the situation changes rapidly. Implication: model-specific evaluations are needed in high-risk domains to understand how the model reconciles conflicting information.
+Keywords: knowledge conflict, parametric vs non-parametric, bias, reconciliation, high-risk domains
+
+C12 | Four trends from the literature
+Source: Nemkova et al., Sec.2
+(1) Media-derived features can provide strong signals for early conflict prediction, particularly for first-onset cases. (2) LLMs can offer flexible and language-aware forecasting capabilities, but require external knowledge for reliability. (3) RAG is emerging as a bridge between deep language models and dynamic real-world data, with growing relevance for humanitarian and geopolitical forecasting. (4) The strength of contextual knowledge is limited when it conflicts with parametric contextual evidence.
+Keywords: media, predictive signals, RAG as bridge, humanitarian forecasting, knowledge conflict
+
+================================================================================
+SECTION 5 — LIMITATIONS AND FUTURE DIRECTIONS
+================================================================================
+
+C13 | Study limitations
+Source: Nemkova et al., Sec. Limitations
+Small test set per country (59 monthly data points). Imbalanced data: Stable/Conflict and Peace much more common than Escalate/De-escalate. Labeling based on slope thresholds → may oversimplify complex dynamics. RAG summaries can introduce ambiguous or noisy context, leading to hallucinated estimates. No fine-tuning or few-shot adaptation used. Evaluation in English only, multilingual sources not yet explored.
+Keywords: limitations, small test set, imbalance, hallucination, no fine-tuning, English only
+
+C14 | Future directions
+Source: Nemkova et al., Sec.6
+Multilingual retrieval (e.g., Arabic sources for the Middle East). Fine-tuning with domain-specific signals. Human-in-the-loop pipeline to increase reliability. Exploration of more advanced open-source models. Integration with existing early warning systems (e.g., ViEWS). More sophisticated prompt design for numerical estimates.
+Keywords: multilingual, fine-tuning, human-in-the-loop, early warning, ViEWS, prompt design
+
+================================================================================
+QUERY → RETRIEVAL MAP
+================================================================================
+
+Q: "Can LLMs predict conflicts without external data?"
+→ C01 + C04 + C07
+
+Q: "Does RAG improve conflict forecasting?"
+→ C05 + C08 + C09 + C11
+
+Q: "What data are needed to predict escalation?"
+→ C02 + C03 + C05
+
+Q: "GPT-4 vs LLaMA-2 for conflict forecasting?"
+→ C07 + C08 + C09
+
+Q: "How does performance vary across regions?"
+→ C10 + C08
+
+Q: "What are the limitations of LLMs for early warning?"
+→ C11 + C12 + C13 + C14
+
+================================================================================
+GLOSSARY
+================================================================================
+
+Parametric knowledge = Knowledge encoded in the LLM's pre-trained weights
+Non-parametric knowledge = External information provided at inference time (via RAG)
+RAG = Retrieval-Augmented Generation — pipeline that injects fresh context into generation
+ACLED = Armed Conflict Location and Event Data Project — data on conflict incidents and fatalities
+GDELT = Global Database of Events, Language, and Tone — metadata on global media coverage
+Goldstein Scale = Numerical scale measuring the cooperation-conflict level of an event
+Tone score = Average sentiment measure of articles about an event/actor
+FAISS = Facebook AI Similarity Search — library for efficient semantic retrieval
+Escalate = Label: increase in violence during the forecast period
+De-escalate = Label: decrease in violence
+Stable Conflict = Label: persistent violence without significant change
+Peace = Label: absence or near-absence of violence
+MAE = Mean Absolute Error — metric for numerical fatality prediction
+Knowledge conflict = Contradiction between parametric knowledge and retrieved information
+Zero-shot = Setting in which the model predicts without examples or fine-tuning
+ViEWS = Violence Early-Warning System — ML-based early warning system (Hegre et al. 2019)
+
+================================================================================
+14 chunks • 5 thematic sections • 16 glossary entries • 6 query-retrieval mappings
+Source: Nemkova, Lingareddy, Ray Choudhury & Albert (2025), arXiv:2505.09852v1

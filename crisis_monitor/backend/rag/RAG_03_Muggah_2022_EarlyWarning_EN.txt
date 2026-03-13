@@ -1,0 +1,165 @@
+RAG KNOWLEDGE BASE — Reflections on the Evolution of Conflict Early Warning
+Source: Muggah & Whitlock (2022), Stability: Int. Journal of Security & Development, 10(1):2, pp.1-16
+DOI: 10.5334/sta.857
+================================================================================
+
+RELEVANCE FOR CRISIS MONITOR v2.1
+───────────────────────────────────
+→ SCANNER agent: 5 generations of EWS, early warning vs risk assessment variables, existing systems
+→ ANALYST agent: long-term structural indicators, nowcasting, ensemble forecasting
+Primary agent: SCANNER | recommended k-retrieval: 4
+
+COVERAGE MAP
+───────────────
+[✗] Psychological dynamics of crowds → ABSENT
+[✗] Social identity and collective behavior → ABSENT
+[✓] Geopolitical risk indices (GPR) → PRESENT — review of EWS systems, risk indices (GCRI, INFORM, ViEWS)
+[✓] Escalation trajectories and crisis clusters → PRESENT — forecasting models, escalation scenarios, thresholds
+[✓] Historical indicators of geopolitical deterioration → CORE TOPIC — 40-year evolution of EWS, structural variables, triggers
+
+================================================================================
+SECTION 1 — DEFINITIONS AND SCOPE
+================================================================================
+
+C01 | What is conflict early warning
+Source: Muggah & Whitlock, pp.1-2
+Conflict early warning aims to identify and trigger actions to reduce the onset, duration, intensity, and effects of multiple forms of political violence, from communal violence to open warfare. Core assumption: the risks associated with crises and conflicts can be tracked, analyzed, communicated to decision-makers, and used to formulate action-oriented proposals. The agenda gained salience in international relations since the 1990s. Three seminal publications: An Agenda for Peace (Boutros-Ghali, 1992), Carnegie Commission on Preventing Deadly Conflict (1997), Prevention of Armed Conflict (Annan, 2001).
+Keywords: early warning, conflict prevention, political violence, decision-makers, Boutros-Ghali, Annan
+
+C02 | The warning-response gap
+Source: Muggah & Whitlock, pp.3, 10-11 | George & Holl (1997)
+The warning-response gap is the crucial missing link between early warning and preventive action. It results from the limited political will to act even when decision-makers have robust evidence of elevated risks of organized violence. Limitations: insufficient EW assessments; limited availability, quality, and verifiability of real-time data; modeling challenges from the endogeneity of conflict processes; small N; too many independent variables; over-predictive nature of models. Forecasts do not tell decision-makers what to do, but what is likely to happen if they do nothing.
+Keywords: warning-response gap, political will, George, Holl, endogeneity, over-prediction
+
+================================================================================
+SECTION 2 — THE 5 GENERATIONS OF EARLY WARNING
+================================================================================
+
+C03 | First generation (1995-2000)
+Source: Muggah & Whitlock, p.4
+Centralized, predictive, focused on supporting decision-making by elite actors. Top-down approach.
+Keywords: first generation, centralized, predictive, elite, top-down
+
+C04 | Second generation (2000-2005)
+Source: Muggah & Whitlock, p.4
+More decentralized, qualitative, oriented toward proposing recommendations for action.
+Keywords: second generation, decentralized, qualitative, recommendations
+
+C05 | Third generation (2005-2015)
+Source: Muggah & Whitlock, p.4
+Hyper-localized, both structured and unstructured data, community-based methods.
+Keywords: third generation, hyper-localized, community-based, mixed data
+
+C06 | Fourth generation (2015-2020)
+Source: Muggah & Whitlock, p.4
+Quantitative, multi-layer spatial (satellite remote sensing, social media), shallow machine learning on open and administrative datasets.
+Keywords: fourth generation, quantitative, satellite, social media, machine learning
+
+C07 | Fifth generation (2020+)
+Source: Muggah & Whitlock, pp.4, 11
+Promises to bridge the warning-response gap. Applies deep machine learning and AI to generate parsimonious assessments, paired with a range of real-time decision options with risks and payoffs. Example: Palantir Gotham applied to a US-China scenario in the Taiwan Strait — EW analysis paired with ranked decision options for elite-level decision-makers. US Defense invests in ML to model future conflicts globally and understand which US actions could lead to unexpected escalation. Remains in the domain of well-funded defense/intelligence agencies and commercial companies.
+Keywords: fifth generation, deep learning, AI, Palantir, Gotham, Taiwan, decision options, warning-response gap
+
+================================================================================
+SECTION 3 — CATALOG OF MAJOR EWS SYSTEMS (Table 1)
+================================================================================
+
+C08 | ACLED — Armed Conflict Location & Event Data Project
+Source: Muggah & Whitlock, Table 1
+Real-time data from news feeds on location, dates, actors, fatalities, and types of political violence and protests. Coverage: Africa, Middle East, Latin America, Asia, Europe, USA. Dedicated Early Warning Research Hub. US 501(c)(3) non-profit, funded by US State Dept, Netherlands, Germany, IOM, UT Austin.
+Keywords: ACLED, real-time data, political violence, protests, global coverage
+
+C09 | ICEWS — Integrated Crisis Early Warning System
+Source: Muggah & Whitlock, Table 1
+Comprehensive automated system for monitoring, assessing, and forecasting national and subnational crises (conflict, ethnic/religious violence, rebellion/insurgency). 100 data sources + 250 news feeds, Jabari + BBN Serif NLP technology. Includes iData, iTrace, iCast, iSENT. CAMEO ontology. 250 countries/territories. Developed by DARPA and Office of Naval Research (2007), maintained by Lockheed Martin.
+Keywords: ICEWS, DARPA, automated, CAMEO, 250 countries, Lockheed Martin, NLP
+
+C10 | ViEWS — Violence Early-Warning System
+Source: Muggah & Whitlock, Table 1 | Hegre et al. (2019)
+Tracks 4 types of political violence: state vs. non-state, between non-state actors, against civilians, forced displacement. Blended approach: Bayesian methods + regression to generate early warnings for specific actors in geographic areas, 1 month in advance. Focus: Africa. Cost: ~€600,000/year. Uppsala Conflict Data Program (UCDP), Uppsala University.
+Keywords: ViEWS, Uppsala, UCDP, Bayesian, Africa, 1 month, political violence
+
+C11 | Other key systems
+Source: Muggah & Whitlock, Table 1
+CEWS (African Union): observation units + regional units + SitRoom. PITF (Political Instability Task Force): 4 state failure events, 10 variables, Univ. Maryland. EC/EU EWS + GCRI: Global Conflict Risk Index with 24 variables from 14 datasets, regression + composite model. INFORM: humanitarian risk on hazard, exposure, vulnerability, coping capacity. EU-LISTCO: governance risks in Europe (2018-2021, €5M). SAGE (UN DPKO): incident database for peacekeeping. CEWARN (IGAD): 50 indicators, 4 incident categories, Horn of Africa, $1.4M/year. Early Warning Project (USHMM + Dartmouth): annual risk assessment of 160 countries. Atrocity Forecasting Project (ANU): ML on 200+ incidents 1946-2017. Sentinel Project: genocide prevention, open source + social media.
+Keywords: CEWS, PITF, GCRI, INFORM, EU-LISTCO, SAGE, CEWARN, USHMM, atrocity forecasting
+
+================================================================================
+SECTION 4 — VARIABLES AND METHODOLOGIES
+================================================================================
+
+C12 | Early warning variables (short-term triggers)
+Source: Muggah & Whitlock, pp.9-10
+Short-term triggers: increase in hate media; public rallies; elections; public commemorations; changes in government leadership; increase in repression; physical separation of vulnerable groups; arms transfers; increase in opposition capacity; security deployment; armed conflict and civilian targeting; natural disasters. "Peace-centric" factors: presence/strengthening of peacekeeping forces; temporary ceasefires; medium-term policies to create negotiating space.
+Keywords: triggers, hate media, elections, repression, arms, peacekeeping, ceasefire
+
+C13 | Risk assessment variables (long-term structural conditions)
+Source: Muggah & Whitlock, pp.9-10
+Structural conditions: type of political regime (autocratic, democratic); prior history of political instability; degree of integration into the global economy; levels of state-driven discrimination. Common variables in ensemble forecasting: history of prior atrocities, regime type, political stability, conflict history, neighborhood effects, economic factors. Data used: demographics, education, security, socio-economics, macroeconomics, energy sector. Sources: administrative data, media, incident reporting, open/closed sources, audio-visual, interviews, focus groups, Delphi.
+Keywords: risk assessment, regime, discrimination, economy, ensemble, structural variables
+
+C14 | Distinction between early warning and risk assessment
+Source: Muggah & Whitlock, pp.9-10
+Early warning: qualitative + statistical, focus on short-term triggers, timely information. Uses time-series, VAR, Bayesian models. Risk assessment: long-range quantitative, structural conditions of onset/escalation/duration, predictive (not causal) models on probabilities and correlations. Ensemble forecasting: averaging across models. Nowcasting: real-time estimates based on incomplete data, timeliness vs. quality trade-off, problems with missing data and measurement errors.
+Keywords: early warning vs risk assessment, nowcasting, time-series, VAR, Bayesian, ensemble
+
+================================================================================
+SECTION 5 — CHALLENGES AND LIMITATIONS
+================================================================================
+
+C15 | Challenges of event-level data
+Source: Muggah & Whitlock, p.9 | Krause (2018) | Dawkins (2021)
+Debate on the veracity, quality, coverage, and coding of event-level data. The politics of body counts: datasets based on wire services and journalistic coverage in conflict environments present systematic biases. Dawkins (2021) on the South Sudanese civil war: is it possible to build better cross-national measures given the biases inherent in the data generation process? The shift from annualized country-level data to high-resolution event-level data has improved comparisons but has not eliminated quality problems.
+Keywords: event-level data, body count, bias, ACLED, UCDP-GED, data quality, Dawkins
+
+C16 | Architecture and plurality of systems
+Source: Muggah & Whitlock, pp.8-9
+There is no monolithic archetype for conflict early warning. Barton et al. (2008): over 30 separate systems and datasets. Managed by: governments, international/regional organizations, think tanks, universities, private actors. Approaches: correlation/regression (USHMM), sequential models (multi-year filters), conjectural modeling (escalation scenarios + thresholds + responses), automated event-coded data, satellite imagery, social media monitoring. The bidirectional warning-response connection is essential, including monitoring of intervention outcomes at subnational and hyper-local scale.
+Keywords: system plurality, 30+ systems, governments, private actors, sequential models, bidirectional connection
+
+================================================================================
+QUERY → RETRIEVAL MAP
+================================================================================
+
+Q: "What is conflict early warning and how has it evolved?"
+→ C01 + C03 + C04 + C05 + C06 + C07
+
+Q: "Why doesn't early warning work as it should?"
+→ C02 + C15 + C16
+
+Q: "What EWS systems exist?"
+→ C08 + C09 + C10 + C11
+
+Q: "What variables are needed to predict conflicts?"
+→ C12 + C13 + C14
+
+Q: "What does the fifth generation of EWS promise?"
+→ C07 + C02
+
+Q: "What is the difference between early warning and risk assessment?"
+→ C14 + C12 + C13
+
+================================================================================
+GLOSSARY
+================================================================================
+
+EWS = Early Warning System — system for anticipating and preventing conflicts
+Warning-response gap = Gap between warning and preventive action, due to lack of political will
+ACLED = Armed Conflict Location & Event Data Project — real-time data on global political violence
+ICEWS = Integrated Crisis Early Warning System — automated system by DARPA/Lockheed Martin
+ViEWS = Violence Early-Warning System — UCDP Uppsala, Bayesian, Africa focus
+GCRI = Global Conflict Risk Index — EU index with 24 variables from 14 datasets
+INFORM = Humanitarian risk index on hazard, exposure, vulnerability, coping
+CEWARN = Conflict Early Warning and Response Mechanism — IGAD, Horn of Africa
+CEWS = Continental Early Warning System — African Union
+R2P = Responsibility to Protect — UN norm for protecting civilians from mass atrocities
+Nowcasting = Real-time estimate based on incomplete data, timeliness/quality trade-off
+Ensemble forecasting = Averaging predictions across multiple models
+Risk assessment = Long-range quantitative assessment of structural conflict conditions
+Early warning = Qualitative + statistical combination focused on short-term triggers
+Kriegsspiel = 18th-century Prussian wargame, historical ancestor of conflict simulation
+Event-coded data = Data automatically coded from news feeds (e.g., GDELT, CAMEO)
+
+================================================================================
+16 chunks • 5 thematic sections • 15 glossary entries • 6 query-retrieval mappings
+Source: Muggah & Whitlock (2022), Stability: Int. J. Security & Development, 10(1):2

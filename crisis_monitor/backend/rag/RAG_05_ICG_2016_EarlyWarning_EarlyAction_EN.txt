@@ -1,0 +1,130 @@
+RAG KNOWLEDGE BASE — Seizing the Moment: From Early Warning to Early Action
+Source: International Crisis Group, Special Report N°2, 22 June 2016
+Author: Crisis Group (Guéhenno et al.)
+URL: crisisgroup.org
+================================================================================
+
+RELEVANCE FOR CRISIS MONITOR v2.1
+───────────────────────────────────
+→ SCANNER agent: 4 categories of operational warning signs, practical indicators of political deterioration
+→ ANALYST agent: anticipatory relationships framework, actor and faction analysis, regional dynamics
+→ VERIFIER agent: policy tools for response (facilitation, coercion, incentives)
+Primary agent: SCANNER | recommended k-retrieval: 4
+
+COVERAGE MAP
+───────────────
+[✗] Psychological dynamics of crowds → ABSENT
+[✗] Social identity and collective behavior → ABSENT
+[~] Geopolitical risk indices → PRESENT — political and elite variables, security indicators
+[✓] Escalation trajectories → PRESENT — spillover, proxy war, peripheral escalation patterns
+[✓] Historical indicators of geopolitical deterioration → CORE TOPIC — 4 categories of warning signs + case studies
+
+================================================================================
+SECTION 1 — THE 4 CATEGORIES OF WARNING SIGNS
+================================================================================
+
+C01 | Category 1: Leaders and elites — polarization strategies
+Source: ICG Special Report, pp.9-11
+Indicators: (a) Leader adopting polarization or radicalization strategies toward their own base (Assad in Syria 2011: "going down fighting"). (b) Breakdown of coalitions holding the leader and elites together. (c) Factions mobilizing against the leader (SPLM in South Sudan 2013: civilian and military divisions in the year before the collapse). (d) Opposition and civil society feeding, defusing, or mitigating the crisis. Dangerous pattern: when factions are intent on violence and domestic constraints are weak, leaders can trigger civil conflicts by design or by accident. Polarization can be amplified by foreign conflicts (Putin in Ukraine). Inflection points: elections, term expiry dates — events that are inherently polarizing. Tunisia 2014 case: the Civil Society Quartet as a balancing mechanism vs. the CAR 2013 case where civilian structures failed to halt deterioration.
+Keywords: polarization, elites, SPLM, South Sudan, Assad, factions, civil society, inflection points, coalitions
+
+C02 | Category 2: Security and military forces
+Source: ICG Special Report, pp.11-13
+Indicators: (a) Army with the capacity to threaten constitutional government (Egypt: ability to overthrow Morsi). (b) Security forces that have lost status and self-confidence (Tunisia post-2011). (c) Lack of cohesion to repel internal/external threats (Iraq 2014). (d) Institutional fragmentation (Libya: absence of an entrenched army as an institution). (e) Ties to only one segment of society (Syria). Three key questions: (1) Do the security forces have political cohesion to threaten the government? (2) Could their divisions lead to internal clashes or security vacuums? (3) Do they have adequate capacity and discipline to maintain public trust? Proliferation of militias and informal armed groups: they must be treated as real political actors, not ignored (Ukraine: militias with their own post-Minsk II agenda).
+Keywords: security forces, army, cohesion, militias, Mali, Tunisia ISF, Nigeria, Boko Haram, security vacuums
+
+C03 | Category 3: Peripheral conflicts
+Source: ICG Special Report, pp.12-14
+"Peripheral" = not just geographically remote but also politically/economically marginalized or cut off from state institutions. Indicators: violence in regions where the central government has little control or tense relations with local populations. Recurring pattern: minorities who feel threatened by national political dynamics (Tuareg in northern Mali, ethnic Russians in eastern Ukraine, Houthis in northern Yemen, Seleka in northeastern CAR). Mechanism: a group initially considered marginal (Seleka as a "heterogeneous consortium of malcontents") can transform into a serious threat by acquiring territory and radicalizing. The treatment by authorities of area-specific problems illuminates dangers for the state as a whole. Difficulty for capital-based observers: limited access, propaganda from central governments (Russia and Chechnya as a "success story").
+Keywords: peripheral conflicts, Seleka, CAR, Tuareg, Mali, Houthis, Yemen, minorities, territorial control, propaganda
+
+C04 | Category 4: External actors and spillover
+Source: ICG Special Report, pp.13-16
+Indicators: (a) Neighboring countries fomenting peripheral conflicts (Chad in CAR, Russia in eastern Ukraine). (b) Proxy wars: when multiple external powers have military roles in others' conflicts (Libya: Chad, Egypt, Qatar, Sudan, Turkey, UAE; Syria: Russia, USA, Iran, Saudi Arabia). (c) Transnational political movements by ethnicity, faith, or strategic calculations (Turkish Kurds and Syrian Kurds). (d) Transnational criminal networks amplifying instability (arms and drug trafficking along fragile borders). Pattern: jihadists are "more a product of instability than its primary driver" — IS and al-Qaeda take advantage of existing crises, they rarely trigger them. Analytical error to avoid: seeing Syria, Libya, Yemen only through the "war on terror" lens while ignoring underlying social structures.
+Keywords: spillover, proxy war, external actors, jihadists, Libya, Syria, Yemen, criminal networks, transnational
+
+================================================================================
+SECTION 2 — ANTICIPATORY RELATIONSHIPS AND PREVENTIVE ACTION
+================================================================================
+
+C05 | Anticipatory relationships framework
+Source: ICG Special Report, pp.15-16, 30
+Policymakers must transform knowledge of warning signs into preventive relationships with key actors. Four components: (1) KNOWLEDGE AND RELATIONSHIPS: cultivate frank communication channels with leaders and elites; closely monitor shifts in political alignment; deepen contacts with military forces and security services; track tensions in volatile peripheral areas. (2) FRAMEWORK DIPLOMACY: build diplomatic frameworks between regional and international powers before crises manifest. (3) STRATEGIC PLANNING AND COMMUNICATION: define clear objectives before engaging in a crisis; communicate them explicitly to allies and adversaries. (4) CREATING PATHWAYS TO PEACE: pair crisis tools with proposals for a mutually beneficial peace settlement as a long-term horizon.
+Keywords: anticipatory relationships, framework diplomacy, knowledge, pathways to peace, strategic communication
+
+C06 | Classic analytical error: focusing only on formal leaders
+Source: ICG Special Report, pp.9-10, 16
+South Sudan 2013: the UN and Western diplomats focused on working with President Kiir, ignoring the internal crisis within the SPLM. They were caught off guard when the country collapsed into war in December. As a former UN official put it: "we choose or create a leader capable of dealing with the international community, but forget to engage with the rest of society and the political sphere." Diplomats must aim to reach beyond authoritarian leaders toward broader actors — but the opposite risk is over-entanglement with a single leader. The critical moment: "calling it early is vital" — when leaders are so entrenched that challenging their right to office seems futile, all options become bad.
+Keywords: South Sudan, SPLM, analytical error, leader focus, broader coalitions, preventive timing
+
+================================================================================
+SECTION 3 — CRISIS RESPONSE TOOLS
+================================================================================
+
+C07 | Facilitation: negotiation, mediation, diplomatic frameworks
+Source: ICG Special Report, pp.22-23
+The "facilitator" creates space for communication between parties in conflict. Tools: (a) FRAMEWORK DIPLOMACY: requires managing the interests of major actors — Russia vs. the West in Syria/Ukraine; China in the Pacific. (b) Disaggregation of difficult issues: addressing specific issues in isolation (e.g., energy governance in Libya in parallel with political reconciliation). (c) International observation missions: OSCE in Ukraine as a confidence-building mechanism. (d) Capital-to-capital hotlines: China and neighbors in the South China Sea. Limitation: facilitation is complicated when countries in conflict are convinced that the peace process benefits the adversary. Israeli-Palestinian case: "low-intensity management disguised as the only path."
+Keywords: facilitation, framework diplomacy, mediation, OSCE, disaggregation, hotlines, confidence building
+
+C08 | Coercion: sanctions, ICC, military force
+Source: ICG Special Report, pp.23-27
+Sanctions: study on 22 UN regimes — increased corruption and crime in 69% of cases, strengthened autocratic authority in 54%, success in only 22%. Effective only if: embedded in a broader political strategy, clear purpose, sufficient multilateral support, tied to clear conditions for removal. ICC: can deter some elites, but can make leaders more radical (Gaddafi "boxed in" → more willing to fight). Military force: risk of internal escalation, shifting objectives, growing resistance. Peace operations: evidence that they reduce violence, but risk freezing political divisions rather than resolving them. ICG rule: "peacekeeping is a tool, not a strategy."
+Keywords: sanctions, ICC, deterrence, Gaddafi, peace operations, military escalation, coercion
+
+C09 | Incentives: creating pathways out of violence
+Source: ICG Special Report, pp.27-29
+Three categories: (1) Specific assistance for implementing political agreements (e.g., funding structures of the South Sudan peace deal). (2) Economic and political assistance to reduce short/medium-term tensions. (3) Mechanisms for long-term agreements on resource sharing (Libya: energy sector governance as political leverage). Principle: leaders will reject assistance if they believe it will lead to a "wrong peace" — a situation where their fundamental security is compromised. Realistically defining a "good peace" (everyone feels secure about the outcome) can refocus leaders' risk analyses. Iran case: the "delayed limited enrichment" proposal (ICG 2006), unpopular at the time, contributed to the 2015 agreement.
+Keywords: incentives, good peace, wrong peace, resource distribution, Libya, Iran, nuclear agreement, pathways
+
+================================================================================
+SECTION 4 — PRACTICAL INDICATORS FOR SCANNER AGENT
+================================================================================
+
+C10 | Operational checklist: concrete warning signs (ICG synthesis)
+Source: ICG Special Report, pp.15-16, 30
+ELITES AND LEADERS: leader promotes polarization or radicalizes their base; elite fragments; opposition mobilizes; inflection points (elections, term expirations) are approaching. SECURITY: internal fragmentation within security forces; appearance of "clans" within command structures; civil-military relations in constant maneuvering; militia proliferation. PERIPHERY: increase in violence in areas where the state has little control; repressive treatment of minorities; spillover from neighboring conflicts. EXTERNAL: neighboring states supplying arms or political support to factions; transnational movements active along fragile borders; arms and drug trafficking increasing; jihadists taking advantage of existing instability.
+Keywords: checklist, warning signs, elites, security, periphery, external, operational, Scanner
+
+================================================================================
+QUERY → RETRIEVAL MAP (oriented to Crisis Monitor agents)
+================================================================================
+
+Q: "What are the early signs of political deterioration?"
+→ C01 + C02 + C03 + C10
+
+Q: "How to monitor security forces as a crisis indicator?"
+→ C02 + C10
+
+Q: "How to assess the role of external actors in a conflict?"
+→ C04 + C09
+
+Q: "How to build preventive relationships before a crisis?"
+→ C05 + C06
+
+Q: "What crisis response tools work?"
+→ C07 + C08 + C09
+
+Q: "What analytical errors lead to false predictions?"
+→ C06 + C04 + C01
+
+================================================================================
+GLOSSARY
+================================================================================
+
+Warning signs = Early indicators of political dynamics that can lead to violence
+Anticipatory relationships = Network of relationships built BEFORE the crisis to enable preventive action
+Inflection points = Structurally polarizing moments (elections, term expirations, symbolic events)
+Peripheral conflicts = Conflicts in politically/economically marginalized areas; often precursors to national crises
+Proxy war = Conflict in which external powers support opposing factions for geopolitical interests
+Spillover = Propagation of conflict dynamics across borders or different sectors
+Framework diplomacy = Building diplomatic mechanisms between key actors to manage potential crises
+Good peace = Agreement perceived as secure by all parties — condition for its sustainability
+Wrong peace = Agreement that compromises fundamental interests of one party → not sustainable
+Keystone actor = Actor whose behavior is determinant for escalation or de-escalation
+Elite fragmentation = Breakdown of coalitions that held the governing elites together
+Security sector reform = Restructuring of security forces to increase cohesion and public trust
+Jihadist groups = Groups that "prey on existing crises" rather than triggering them — analytical error to treat them as primary drivers
+
+================================================================================
+10 chunks • 4 thematic sections • 13 glossary entries • 6 query-retrieval mappings
+Source: International Crisis Group, Special Report N°2 — Seizing the Moment, 22 June 2016

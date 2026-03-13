@@ -1,0 +1,177 @@
+RAG KNOWLEDGE BASE — Understanding Mass Panic
+Source: Fletcher & Aunger (2024), Journal of Applied Social Science, 18(2), 288-308
+DOI: 10.1177/19367244241245702
+================================================================================
+
+RELEVANCE FOR CRISIS MONITOR v2.1
+───────────────────────────────────
+→ VERIFIER agent: distinguish real crisis from collective panic, identify imitative feedback loops
+→ ANALYST agent: psychological mechanisms of mass panic, behavioral indicators
+Primary agent: VERIFIER | recommended k-retrieval: 3
+
+COVERAGE MAP
+───────────────
+[✓] Psychological dynamics of crowds (panic, emotional contagion, thresholds) → CORE TOPIC of the article
+[✓] Social identity and collective behavior → Present as a sociological factor
+[✗] Geopolitical risk indices (GPR) → ABSENT
+[~] Escalation trajectories and crisis clusters → PRESENT — cross-domain cascades (biological→economic→financial)
+[~] Historical indicators of geopolitical deterioration → PARTIAL — historical cases analyzed as recurring patterns
+
+================================================================================
+SECTION 1 — DEFINITION AND TAXONOMY OF MASS PANIC
+================================================================================
+
+C01 | Definition of mass panic
+Source: Fletcher & Aunger, p.288
+Mass panic = an episode of contagious responses of disgust or fear in a large group of people toward an uncertain but significant and ongoing threat, such as infectious disease, financial ruin, or significant economic constraint (threat to life or livelihood). It is distinct from stampede (specific threat, immediate onset, short duration, low imitation) and mass hysteria (nonexistent threat, cumulative onset, unknown duration, high imitation). Mass panic has: uncertain threat, cumulative onset, unknown duration, high dependence on social imitation.
+Keywords: mass panic, definition, contagion, fear, disgust, uncertain threat
+
+C02 | Three categories of mass panic
+Source: Fletcher & Aunger, pp.289-290, Table 1
+(1) BIOLOGICAL — behavior: flight/isolation; invisible agent: pathogen/toxin; critical resource: health services; manifestation: infection symptoms. (2) FINANCIAL — behavior: deposit withdrawal/disinvestment; agent: rumor; resource: monetary reserves; manifestation: reports of bank insolvency. (3) ECONOMIC — behavior: panic buying; agent: rumor; resource: product/service stocks; manifestation: empty shelves, supply gap indicators.
+Keywords: biological, financial, economic, typology, bank run, panic buying, pandemic
+
+C03 | Fight/Flight/Freeze as the basis of mass panic
+Source: Fletcher & Aunger, pp.289-290 | Quarantelli (1954) | Gray (1982)
+Mass panic is a group-level manifestation of the fight/flight/freeze syndrome. FLIGHT: fleeing from contagious disease, moving in the opposite direction from the majority of those fleeing. FIGHT: competition for scarce resources (bank run, panic buying). FREEZE: isolation when the threat is everywhere or impossible to avoid (COVID lockdown, masks). The dominant reaction depends on: individual psychological traits, nature of the threat, physical and social context.
+Keywords: fight, flight, freeze, instinctive response, predator, isolation, lockdown
+
+================================================================================
+SECTION 2 — THE CONCEPTUAL MODEL (Figure 1)
+================================================================================
+
+C04 | Structure of the causal model
+Source: Fletcher & Aunger, pp.293-295, Figure 1
+Input → Psychological processes → Output with feedback loop. INPUT: (a) domain-specific external factors (biological/financial/economic), (b) observable manifestations of the crisis, (c) panic behaviors of others, (d) social factors. PROCESS: individual cognitive processing with activation threshold. OUTPUT: panic behaviors (flight/freeze/buying/withdrawal). FEEDBACK: one individual's panic behavior becomes input for others → imitation → mass panic. Key reference: Granovetter's threshold model (1978).
+Keywords: conceptual model, threshold, feedback loop, Granovetter, imitation, tipping point
+
+C05 | Threshold and tipping point
+Source: Fletcher & Aunger, p.294 | Granovetter (1978) | Bissell (2015) | Porcellacchia (2020)
+A threshold exists during a crisis: if sufficient stimuli are present and transformed by enough individuals into panic behaviors, the population begins to imitate those same behaviors → mass panic. Furthermore, a tipping point reached in one type of panic (e.g., biological) can trigger panic in another domain (e.g., financial). The feedback loop is more likely when the speed of progression is rapid. With social media, contagion no longer requires geographical proximity.
+Keywords: threshold, tipping point, Granovetter, cascade, contagion, social media, speed
+
+C06 | Manifestations as stimuli
+Source: Fletcher & Aunger, pp.294-295
+"Manifestations" are phenomena perceived as worrying evidence of a specific crisis. Biological: visible infection symptoms. Financial: bank queues, bank run rumors. Economic: empty shelves, inability to purchase. In all cases, media reports also function as manifestations. For financial and economic crises, panic behaviors ARE manifestations (queues = both panic and manifestation). The number and rate of increase of manifestations are significant factors.
+Keywords: manifestations, stimuli, perception, symptoms, queues, empty shelves, media
+
+================================================================================
+SECTION 3 — SOCIAL FACTORS
+================================================================================
+
+C07 | Disinformation, rumors, and conspiracy theories
+Source: Fletcher & Aunger, pp.295-296
+For every crisis that leads to mass panic, there is a parallel crisis of rumors and disinformation. Rumors emerge when people must rationalize information in ambiguous contexts with large gaps in public knowledge. Conspiracy theories offer instant gratification amid chaos. With social media, negative posts spread faster; disinformation outpaces reliable official information. Historical example: during the Black Death in London, conspiracy rumors blamed Jews and witches. Modern example: during COVID-19, the Shuang huanglian remedy in China caused panic buying. Emotions themselves spread contagiously via social media.
+Keywords: disinformation, rumors, conspiracy theories, social media, infodemic, Black Death, COVID
+
+C08 | Trust in institutions
+Source: Fletcher & Aunger, p.297
+If there is strong trust in institutions → mass panic is unlikely. "Rally round the flag" effect that galvanizes the population. Positive example: trust in central banks and deposit insurance prevents bank runs. Negative example: BSE/vCJD crisis — the government declared meat safe, but contradictory information destroyed credibility → market devastation. Historical example: Black Death — no effective institution → widespread looting. Institutional trust also translates into greater adherence to crisis management policies.
+Keywords: institutional trust, rally round the flag, credibility, central banks, BSE, compliance
+
+================================================================================
+SECTION 4 — PSYCHOLOGICAL PROCESSES
+================================================================================
+
+C09 | Personal factors: vulnerability, uncertainty, loss of control
+Source: Fletcher & Aunger, pp.297-298
+(1) Perceived vulnerability — how exposed the individual feels to the threat; influenced by personal history of similar crises; the effectiveness of past responses provides resilience. (2) Uncertainty about the nature of the threat — potentially dominant variable; determines whether and which fight/flight/freeze response is activated; arises from lack of information + disinformation. (3) Loss of control — perception that others' actions dominate the outcome of the situation → helplessness and anxiety.
+Keywords: perceived vulnerability, uncertainty, loss of control, helplessness, resilience
+
+C10 | Cognitive biases during crises
+Source: Fletcher & Aunger, p.298
+(1) NEGATIVITY BIAS — evolutionary tendency to pay more attention to threats than to opportunities; ignoring threats can be lethal, ignoring opportunities rarely is; leads to false positives (e.g., cough = COVID). (2) EARLY RESPONSE BIAS — selective advantage for those who respond before others; "first come first served" in fleeing and resource hoarding; better to react immediately by copying others than to reflect. (3) IMITATION BIAS — if others are panicking, they probably have better information → their response should be copied; amplified by negativity bias + early response bias.
+Keywords: negativity bias, early response bias, imitation bias, evolutionary, false positives, first mover
+
+================================================================================
+SECTION 5 — CROSS-DOMAIN CASCADES (escalation between crisis types)
+================================================================================
+
+C11 | Biological → Economic (frequent cascade)
+Source: Fletcher & Aunger, pp.299-301
+Mechanism: pandemic → flight/isolation → loss of access to supplies → panic buying. Two pathways: (1) fleeing to the countryside/isolating at home makes it difficult to access retail points; (2) if those who manage economic institutions must also flee/isolate → supply chains threatened, stores closed. COVID-19 case: biological panic → hoarding of toilet paper and essential goods. Imitative behavior produced the scarcity it sought to protect against (self-fulfilling prophecy).
+Keywords: cascade, biological-economic, COVID, panic buying, supply chain, self-fulfilling prophecy
+
+C12 | Economic → Biological (rare cascade)
+Source: Fletcher & Aunger, pp.299-300
+Weak mechanisms: panic buying → crowding in stores → disease spread; shortage of sanitizers; stress → reduced prevention. But all require the precondition of a pathogen already in circulation. The conjunction of the necessary processes is unlikely except for rare coincidences.
+Keywords: reverse cascade, economic-biological, rare, pathogen preconditions
+
+C13 | Financial system: buffers and resilience
+Source: Fletcher & Aunger, pp.300-301
+The modern financial system has developed buffers: federal deposit insurance, government-backed risk-sharing systems. Example: the Federal Reserve during the 1918 Spanish influenza functioned well; during COVID, the internationalization of insurance maintained stability. Financial panics are almost always caused by weaknesses internal to the sector (derivatives speculation, high-risk mortgages, inadequate regulation). Biological and economic crises rarely cause financial panics thanks to these buffers.
+Keywords: financial system, buffers, deposit insurance, Federal Reserve, resilience, derivatives
+
+================================================================================
+SECTION 6 — HISTORICAL CASE STUDIES (Table 3)
+================================================================================
+
+C14 | Case studies analyzed
+Source: Fletcher & Aunger, p.292, Table 3
+BIOLOGICAL: COVID-19 (global, 2019-present, virus, 600M infections, 6M deaths); Ebola (West Africa, 2013-16, virus, 28,646 infections); BSE/vCJD (UK, 1980s-90s, prion, 177 deaths); Tylenol murders (Illinois 1983, toxin, 7 deaths); Black Death (Europe, c.1347-50, bacterium, ~25M deaths). FINANCIAL: 2008 crisis (USA, 465 banks failed); Great Depression (USA 1929-32, 9,000 banks failed). ECONOMIC: Y2K panic (global, 1999, little disruption); 1973 toilet paper panic (USA, little disruption).
+Keywords: case studies, COVID, Ebola, BSE, Tylenol, Black Death, 2008 crisis, Great Depression, Y2K
+
+C15 | Recurring behaviors in historical cases
+Source: Fletcher & Aunger, p.293
+Common patterns: (1) mass flight from populated centers; (2) dangerous health practices (harmful home remedies); (3) resource hoarding/bank runs; (4) violence against healthcare workers and officials; (5) non-compliance with government directives; (6) looting and riots; (7) spread of conspiracy theories and rumors. Associated conditions: high but uncertain risk; no escape route; widespread distrust; institutions with incomplete information; freely circulating rumors.
+Keywords: behavioral patterns, flight, hoarding, violence, looting, rumors, conditions
+
+================================================================================
+SECTION 7 — POLICY IMPLICATIONS
+================================================================================
+
+C16 | Recommendations for policymakers
+Source: Fletcher & Aunger, pp.301-302
+The model can help policymakers prevent the panic threshold from being exceeded. Actions: (1) monitor domain-specific variables through surveillance systems (epidemiological, economic); (2) conduct social surveys to measure trust in institutions; (3) monitor conspiracy theory mention trends on social media; (4) measure psychological traits such as perceived vulnerability and generalized anxiety; (5) be vigilant about symptoms BEFORE behaviors become widely imitated. Physical disasters (earthquakes, floods) tend to produce pro-social responses because the threat is known and brief; biological/financial/economic crises produce antisocial responses because other people become the proximate source of the threat.
+Keywords: policy, prevention, surveillance, social media monitoring, trust, threshold, resilience
+
+================================================================================
+QUERY → RETRIEVAL MAP
+================================================================================
+
+Q: "What is mass panic and how does it differ from stampede and hysteria?"
+→ C01 + C03
+
+Q: "How does the causal model of mass panic work?"
+→ C04 + C05 + C06
+
+Q: "Which cognitive biases fuel panic?"
+→ C09 + C10
+
+Q: "How can a pandemic cause panic buying?"
+→ C11 + C12 + C05
+
+Q: "What are the recurring historical patterns in crises?"
+→ C14 + C15 + C07
+
+Q: "How to prevent mass panic?"
+→ C08 + C16 + C07
+
+Q: "How do biological, financial, and economic crises interact?"
+→ C02 + C11 + C12 + C13
+
+================================================================================
+GLOSSARY
+================================================================================
+
+Mass panic = Contagious episode of fear/disgust in a large group toward an uncertain and ongoing threat
+Fight/Flight/Freeze = Three instinctive responses to threat: fight, flee, freeze
+Panic threshold = Critical point at which sufficient stimuli activate panic behaviors in an individual
+Tipping point = Moment when individual panic becomes mass panic through imitation
+Manifestations = Observable phenomena indicative of a crisis (symptoms, queues, empty shelves)
+Feedback loop = Panic behavior is both input and output of the model → self-amplification
+Negativity bias = Evolutionary tendency to overestimate threats relative to opportunities
+Early response bias = Selective advantage for those who react before others in scarcity situations
+Imitation bias = Tendency to copy others' behavior assuming they have better information
+Behavioral contagion = Person-to-person spread of panic behaviors
+Cross-domain cascade = One type of panic (e.g., biological) triggering another type (e.g., economic)
+Bank run = Massive withdrawal of bank deposits driven by panic and imitation
+Panic buying = Competitive hoarding of goods driven by fear of scarcity
+Community resilience = A community's ability to resist mass panic through social networks and trust
+Financial buffer = Institutional mechanisms (deposit insurance, reserves) that attenuate panic
+Rally round the flag = Effect of cohesion around institutions during a crisis
+Self-fulfilling prophecy = Panic behavior creates the feared condition (e.g., panic buying → scarcity)
+
+================================================================================
+16 chunks • 7 thematic sections • 17 glossary entries • 7 query-retrieval mappings
+Source: Fletcher & Aunger (2024), Understanding Mass Panic, JASS 18(2):288-308

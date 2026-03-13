@@ -1,0 +1,139 @@
+RAG KNOWLEDGE BASE — The Psychology of Crowd Dynamics
+Source: Reicher, S. (2001). In Hogg & Tindale (Eds.), Blackwell Handbook of Social Psychology: Group Processes (Ch. 8, pp. 182–208)
+Publisher: Blackwell Publishers
+================================================================================
+
+RELEVANCE FOR CRISIS MONITOR v2.1
+───────────────────────────────────
+→ ANALYST agent: crowd psychology, social identity, behavioral contagion, collective action patterns
+→ VERIFIER agent: distinction between structured collective action and perceived chaos, critique of irrationalist view
+Primary agent: ANALYST | recommended k-retrieval: 4
+
+COVERAGE MAP
+───────────────
+[✓] Psychological dynamics of crowds → CORE TOPIC
+[✓] Social identity and collective behavior → CORE TOPIC (SIMCA)
+[✗] Geopolitical risk indices → ABSENT
+[~] Escalation trajectories → PARTIAL (conflict spirals, escalation commitment)
+[✗] Historical indicators of geopolitical deterioration → ABSENT
+
+================================================================================
+SECTION 1 — CLASSICAL THEORIES AND THEIR LIMITATIONS
+================================================================================
+
+C01 | Le Bon (1895): submergence, contagion, suggestibility
+Source: Reicher, pp.185-187
+Three mechanisms: (1) SUBMERGENCE — in the crowd the individual loses the sense of self and acquires a sense of invincible power. (2) CONTAGION — inability to resist ideas/emotions spreading through the crowd; contagion is made possible by the obliteration of the intellect. (3) SUGGESTIBILITY — the ideas pervading the crowd stem from the atavistic "racial unconscious." Result: crowd members "descend several rungs on the ladder of civilization" → become "barbarians." Le Bon's intention: to provide politicians with tools to manipulate crowds (simplify ideas, use assertion and repetition) against the threat of 19th-century working-class masses.
+Reicher's critique: (a) Decontextualization — the crowd is severed from its social and geopolitical context. (b) Desocialization — the self is conceived as a unique and sovereign construct; the social context only modifies its operation, not its content. (c) Ideology — denies voice and legitimacy to collective action, naturalizes repression.
+Keywords: Le Bon, submergence, contagion, suggestibility, racial unconscious, mass panic, crowd manipulation
+
+C02 | Deindividuation: Zimbardo → Diener → Prentice-Dunn & Rogers
+Source: Reicher, pp.187-189
+Zimbardo (1969): anonymity lowers self-observation and self-evaluation → lower thresholds for antisocial behavior. Diener (1977): immersion in the group overloads information processing → blocks self-awareness → reactivity to environmental stimuli (pro-social or anti-social depending on context). Prentice-Dunn & Rogers (1989): loss of public self-awareness (anti-normative behavior) vs. private self-awareness (loss of internal standards). EMPIRICAL CRITIQUE: meta-analysis by Postmes & Spears (1998) — "deindividuated" individuals adhere MORE to collective norms, not less. Implication: deindividuation does not produce chaos but conformity to contextual group norms.
+Keywords: deindividuation, Zimbardo, Diener, threshold, anonymity, self-awareness, collective norms, Postmes, Spears
+
+C03 | The individualist view (Allport) and its failure
+Source: Reicher, pp.189-192
+Allport (1924): "The individual in the crowd behaves just as he would behave alone, only more so." The crowd as an accentuation of pre-existing individual tendencies. "Rational calculus" model (Berk): crowd members as utility maximizers. CONTRARY EVIDENCE: McPhail (1971) — across 288 studies, almost no individual trait predicts riot participation. US Riot Commission (1968): rioters were stable residents, better educated, and more politically informed than average. Thompson (1971): food riots in 18th-century England were not anarchic explosions but structured patterns reflecting "moral economies." Grain was sold at a "popular price" and money returned to merchants. Conclusion: collective action is SOCIALLY STRUCTURED, not random.
+Keywords: Allport, utility maximizer, McPhail, Thompson, moral economy, structured riots, collective predictability
+
+================================================================================
+SECTION 2 — THEORIES OF CROWD SOCIALITY
+================================================================================
+
+C04 | Emergent norm theory (Turner & Killian, 1987)
+Source: Reicher, pp.192-194
+Collective action occurs under NEW (not traditional) norms, formed during the event itself. Process: (1) Ambiguous situation → period of "milling" (circulating, seeking meaning). (2) "Keynoters" propose actions in a decisive, terse, unhesitant manner. (3) The illusion of unanimity grows as more people adopt the keynoter's proposal. (4) The illusion becomes a self-fulfilling prophecy. APPLICATION: explains why violent moments follow periods of "hanging around" during which the crowd seeks to make sense of the situation. LIMITATIONS: does not explain how the crowd maintains unity without prolonged milling or how norms reflect broader ideological cultures. Tends to slide into elitism — norms emerge from individual attributes of the keynoter, not from social structure.
+Keywords: emergent norms, Turner, Killian, milling, keynoter, unanimity, ambiguity, self-fulfilling prophecy
+
+C05 | SIMCA — Social Identity Model of Crowd Action (Reicher)
+Source: Reicher, pp.194-208 | Tajfel & Turner (1979, 1986) | Turner et al. (1987)
+The central model of the chapter. Thesis: the crowd is NOT a loss of identity but a SHIFT from personal identity to categorical social identity. Mechanism: (1) Crowd members self-categorize as members of a specific category. (2) This activates the corresponding social identity and its ideological content. (3) Appropriate actions are inferred through the INDUCTIVE aspect: observing the behaviors of "typical" (prototypical) group members, not through explicit deliberation. (4) Crowd members do not follow just anyone but only those perceived as members of the same category. (5) Crowd members do not do just anything but only what is consistent with their categorical identity in context. Three levels of change produced by collective action: (a) Self-perception as social actors (understanding of self and society). (b) Collective ideologies (new worldviews). (c) Restructuring of society (structural change). DIFFERENCE from emergent norm theory: the criterion for following a "keynoter" is not their individual status but their categorical prototypicality.
+Keywords: SIMCA, social identity, Reicher, Tajfel, Turner, self-categorization, prototypicality, inductive aspect, collective action
+
+C06 | Social identity: key concepts
+Source: Reicher, pp.194-195 | Tajfel (1978) | Turner et al. (1987)
+Distinction: PERSONAL identity (individual uniqueness relative to other individuals) vs. SOCIAL identity (uniqueness of our group relative to other groups). All identities are social in a broad sense (they define the person in terms of social relations) and personal (deeply important to the individual). The definition of social categories is inevitably tied to ideological traditions — what it means to be Catholic, socialist, Scottish cannot be understood outside such traditions. SELF-CATEGORIZATION (Turner et al.): by defining themselves as category members, people engage in a process of self-stereotyping → conforming to the content of the categorical identity. DEDUCTIVE aspect (in normal contexts): norms derived from deliberate consideration of categorical identity. INDUCTIVE aspect (in crowd contexts): norms inferred from the actions of those who appear as typical group members.
+Keywords: personal vs. social identity, self-categorization, self-stereotyping, deductive vs. inductive aspect, Turner, Tajfel
+
+================================================================================
+SECTION 3 — EMPIRICAL PATTERNS AND IMPLICATIONS
+================================================================================
+
+C07 | Crowds are structured, not chaotic — historical evidence
+Source: Reicher, pp.182-184, 190-192
+Thompson (1971): food riots in 18th-century England were highly structured, guided by a "moral economy" — grain sold at a popular price and money returned to merchants. NOT biological explosions of hunger. US Riot Commission (1968): portrait of the typical ghetto rioter — long-term resident, better educated than average, more politically informed. C. Tilly (1969, 1970): in 19th-century European cities, greater growth and social disorganization correlated with FEWER riots, not more. Riots occurred in stable areas with established social networks. McPhail (1971): across 288 studies (1965-1969), no individual trait predicts participation. Crowd members differ from non-participants in IDEOLOGY and IDENTIFICATION, not in personality traits.
+Keywords: structured patterns, Thompson, moral economy, US Riot Commission, social stability, ideology, identification
+
+C08 | Behavioral contagion in collective settings
+Source: Reicher, pp.186-188 | Kelly (Ch.7) | Hatfield et al. (1993, 1994)
+Primitive emotional contagion (Hatfield et al.): automatic and unconscious tendency to mimic and synchronize expressions, postures, vocalizations → emotional convergence. In crowds, contagion occurs not through primitive irrationality (Le Bon) but through shared social identity: people imitate the behavior of those perceived as members of their own group. "Group affective tone" (George, 1990): affective convergence over time → homogeneous emotional tone within the group. Leaders with high non-verbal expressiveness determine the emotional tone of the entire group. In crisis and crowd contexts: the visible behaviors of "typical" members serve as normative signals that others imitate — a behavioral diffusion mechanism.
+Keywords: emotional contagion, Hatfield, social identity, imitation, group affective tone, normative signals, diffusion
+
+C09 | Implications for collective crisis analysis
+Source: Reicher, pp.182-184, 205-208
+1. Crowds and collective movements are NOT irrational or unpredictable in an absolute sense: they follow the logic of the social identities at play and the intergroup context. 2. To predict collective behavior one must identify: (a) the salient social categories in that context, (b) the ideological content of those categories, (c) who is perceived as a "typical" (prototypical) member and the behaviors they model. 3. MANIFESTATIONS (visible behaviors of other crowd members) are more determinant than individual personality. 4. The response of security forces is crucial: Le Bon and Allport ignored the counterparts in crowd interactions. Police/military actions co-determine escalation. 5. The role of the "keynoter" or charismatic leader: what matters is not so much their individual prestige but their categorical prototypicality — they are followed because they embody the group's identity, not because they are powerful.
+Keywords: collective predictability, social categories, prototypicality, manifestations, security response, keynoter, intergroup escalation
+
+================================================================================
+SECTION 4 — CONFLICT SPIRALS AND ESCALATION
+================================================================================
+
+C10 | Escalation of commitment in groups
+Source: Stasser & Dietz-Uhler (Ch.2, cited in Blackwell Handbook) | Bazerman et al. (1984) | Whyte (1993)
+Persistence in a failing strategy despite negative feedback. GROUPS escalate more than individuals, especially when: (1) strong group identification, (2) internal attributions for performance ("our strategy is right, the problem is external"), (3) requirement to rationally justify unexpected results before feedback. Mechanism via prospect theory (Whyte): framing as certain loss (alternative) vs. possible loss (continuing) favors risk → escalation. Implication for crises: groups/factions tend to intensify conflict more than rational individuals.
+Keywords: escalation of commitment, groups, Bazerman, prospect theory, identification, internal attributions
+
+C11 | Conflict spirals (Thompson et al., Ch.6)
+Source: Thompson et al. (Ch.6 Blackwell Handbook) | Deutsch (1973)
+Competitive process → suspicious and hostile attitudes. Negotiators' emotions grow exponentially. The spiral expands regardless of the initial cause (competition + misperception + commitment). Negative emotions are CONTAGIOUS between parties. Negotiations collapse when one party wants to DAMAGE the other, not just prevail. Cited as a causal mechanism of wars between nations. Coercive power (Hitler-Schuschnigg case): in the annexation of Austria, the mode of influence escalated to strident behavior and apparent simulated irrationality — extreme threats became credible precisely because of their irrationality.
+Keywords: conflict spiral, Deutsch, negative emotions, contagion, negotiation collapse, coercive power, credible threats
+
+================================================================================
+QUERY → RETRIEVAL MAP (oriented to Crisis Monitor agents)
+================================================================================
+
+Q: "Why do crowds behave in a coordinated manner during crises?"
+→ C05 + C06 + C07
+
+Q: "How does panic or panic behavior spread?"
+→ C08 + C01 + C04
+
+Q: "Are crowds unpredictable or do they follow patterns?"
+→ C07 + C09 + C03 + C05
+
+Q: "Who is the 'keynoter' and why are they followed?"
+→ C04 + C05 + C09
+
+Q: "How does group identity influence collective action?"
+→ C05 + C06 + C09
+
+Q: "Why do conflicts escalate beyond the initial intention?"
+→ C10 + C11 + C01
+
+Q: "How to distinguish structured collective action from chaos?"
+→ C07 + C03 + C09
+
+================================================================================
+GLOSSARY
+================================================================================
+
+SIMCA = Social Identity Model of Crowd Action — the crowd as a group driven by categorical identity
+Submergence = Loss of self + sense of power in the crowd (Le Bon) — concept criticized as ideological
+Deindividuation = Reduction of self-awareness in a group; empirically produces conformity to collective norms
+Social identity = Part of the self based on categorical membership (Tajfel); always tied to ideological traditions
+Self-categorization = Defining oneself as a category member → self-stereotyping → categorical conformity
+Inductive aspect = Inferring group norms from the behaviors of prototypical members (key mechanism in crowds)
+Deductive aspect = Deriving norms from deliberate consideration of categorical identity (routine contexts)
+Group prototype = Member who best embodies the categorical identity; whoever is perceived as such leads the crowd
+Moral economy = System of collective values that structures crowd action (Thompson) — opposed to the view of the crowd as chaos
+Keynoter = Individual who proposes action in a decisive and unhesitant manner, resolving the crowd's ambivalence
+Emergent norms = Norms formed during milling in ambiguous situations (Turner & Killian)
+Milling = Pre-action period of circulating and exchanging during which the crowd seeks shared meaning
+Emotional contagion = Automatic imitation of others' emotions/behaviors; mediated by shared identity, not primitivism
+Escalation of commitment = Persistence in a failing strategy; groups escalate more than individuals
+Conflict spiral = Self-reinforcing dynamic of emotional escalation; expands beyond the initial cause
+
+================================================================================
+11 chunks • 4 thematic sections • 15 glossary entries • 7 query-retrieval mappings
+Source: Reicher (2001), Ch. 8 in Hogg & Tindale, Blackwell Handbook of Social Psychology: Group Processes

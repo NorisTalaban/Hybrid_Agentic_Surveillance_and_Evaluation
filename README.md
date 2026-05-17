@@ -6,7 +6,7 @@
 
 **Link dashboard-** https://hybridagenticsurveillance.vercel.app/
 
-A multi-agent system for real-time monitoring of global crises. 8 autonomous agents perceive, understand, and reason — with a dedicated agent that monitors overall system health. Combining deterministic Python validation, LLM reasoning, RAG academic frameworks, and web search.
+A multi-agent system for real-time monitoring of global crises. 8 autonomous agents perceive, understand, and reason, with a dedicated agent that monitors overall system health. Combining deterministic Python validation, LLM reasoning, RAG academic frameworks, and web search.
 
 > **Note:** HASE is a hybrid system combining deterministic Python validators with LLM reasoning. Due to the probabilistic nature of language APIs, a 100% perfect handling of information is not guaranteed. The system includes multiple validations and cross-audits to mitigate errors, but it is designed to support human analysis, not replace it.
 >
@@ -34,26 +34,26 @@ A multi-agent system for real-time monitoring of global crises. 8 autonomous age
 
 ```
 1. PERCEPTION
-   Scanner (Sonnet + web search) ──→ ValidatorC ──→ crises
-   Collector (GNews API)         ──→ raw_articles
+   Scanner (Sonnet + web search) --> ValidatorC --> crises
+   Collector (GNews API)         --> raw_articles
                         ▼
 2. UNDERSTANDING
-   Classifier (Haiku)  ──→ Sonnet audit ──→ classified_events
+   Classifier (Haiku)  --> Sonnet audit --> classified_events
          ▼
    ValidatorA (Python)
          ▼
-   Matcher (Sonnet)    ──→ Sonnet audit ──→ crises + crisis_events
+   Matcher (Sonnet)    --> Sonnet audit --> crises + crisis_events
          ▼
    ValidatorB (Python, auto-merge duplicates)
          ▼
-   Connector (Haiku)   ──→ Sonnet audit ──→ connections
+   Connector (Haiku)   --> Sonnet audit --> connections
                         ▼
 3. INTELLIGENCE
-   Analyst  (Sonnet + RAG)              ──→ analyses + key_timeline
-   Verifier (Sonnet + Web Search + RAG) ──→ verification_log + crises
+   Analyst  (Sonnet + RAG)              --> analyses + key_timeline
+   Verifier (Sonnet + Web Search + RAG) --> verification_log + crises
                         ▼
 4. META
-   Supervisor (Python + Sonnet) ──→ cm_supervisor_log
+   Supervisor (Python + Sonnet) --> cm_supervisor_log
    Monitors all 7 agents ↑
 ```
 
@@ -63,31 +63,31 @@ A multi-agent system for real-time monitoring of global crises. 8 autonomous age
 
 ### 1. PERCEPTION
 
-**Scanner (Agent 00)** — Searches for new crises worldwide via web search. Sonnet performs 3-4 web searches, synthesizing results into structured JSON. ValidatorC filters in two passes: first discards crises older than 90 days, then Haiku verifies they are real and active (not historical or speculative). SeedWriter persists to DB. Runs weekly.
+**Scanner (Agent 00)** Searches for new crises worldwide via web search. Sonnet performs 3-4 web searches, synthesizing results into structured JSON. ValidatorC filters in two passes: first discards crises older than 90 days, then Haiku verifies they are real and active (not historical or speculative). SeedWriter persists to DB. Runs weekly.
 
-**Collector (Agent 01)** — Collects news from GNews API across 5 categories: conflicts, disasters, politics, health, top headlines. No LLM — pure HTTP with URL deduplication. Produces 30-44 articles per run. Runs every 6 hours.
+**Collector (Agent 01)** Collects news from GNews API across 5 categories: conflicts, disasters, politics, health, top headlines. No LLM, pure HTTP with URL deduplication. Produces 30-44 articles per run. Runs every 6 hours.
 
 ### 2. UNDERSTANDING
 
-**Classifier (Agent 02)** — Receives raw articles and transforms them into structured events. Haiku reads each article and decides: is this a crisis? If so, it fills in type, severity (1-10), countries involved with roles, location, keywords. Sonnet audits each batch and sends only corrections (not the full output). Python applies corrections, validating that type and severity are DB-allowed values. Processes in batches of 15.
+**Classifier (Agent 02)** --> Receives raw articles and transforms them into structured events. Haiku reads each article and decides: is this a crisis? If so, it fills in type, severity (1-10), countries involved with roles, location, keywords. Sonnet audits each batch and sends only corrections (not the full output). Python applies corrections, validating that type and severity are DB-allowed values. Processes in batches of 15.
 
-**ValidatorA** — Python checkpoint: verifies required fields, ISO-2 country codes, severity in range 1-10, valid type. Organization codes (EU, NATO, G7, OPEC) are remapped to the first real country in the event. Hard fail blocks the event, soft fail logs and lets through.
+**ValidatorA** --> Python checkpoint: verifies required fields, ISO-2 country codes, severity in range 1-10, valid type. Organization codes (EU, NATO, G7, OPEC) are remapped to the first real country in the event. Hard fail blocks the event, soft fail logs and lets through.
 
-**Matcher (Agent 03)** — For each event decides: does it belong to an existing crisis, is it a new crisis, or is it a duplicate? Sonnet reasons on context — country overlap alone is not enough. Python validates 6 things before every write: does the crisis_id exist in DB? Does the event_id exist? Is severity between 1-10? Is the status canonical? Is the type valid? Is the source allowed? Crisis severity is recalculated as the median of the last 48h of events.
+**Matcher (Agent 03)** --> For each event decides: does it belong to an existing crisis, is it a new crisis, or is it a duplicate? Sonnet reasons on context, country overlap alone is not enough. Python validates 6 things before every write: does the crisis_id exist in DB? Does the event_id exist? Is severity between 1-10? Is the status canonical? Is the type valid? Is the source allowed? Crisis severity is recalculated as the median of the last 48h of events.
 
-**ValidatorB** — Detects duplicate crises: same country, same type, similar name (>80% overlap). If confirmed, performs auto-merge: moves events and connections from the duplicate to the original, then deletes the duplicate.
+**ValidatorB** --> Detects duplicate crises: same country, same type, similar name (>80% overlap). If confirmed, performs auto-merge: moves events and connections from the duplicate to the original, then deletes the duplicate.
 
-**Connector (Agent 04)** — Analyzes all active crises and maps country-to-country relationships across 8 types: military attack, sanction, trade cut, aid, alliance, disruption, refugee flow, diplomatic break. Each run regenerates everything from scratch and diffs against the DB: new connections inserted, existing ones updated, missing ones deactivated. Sonnet audits and removes weak ones.
+**Connector (Agent 04)** -->Analyzes all active crises and maps country-to-country relationships across 8 types: military attack, sanction, trade cut, aid, alliance, disruption, refugee flow, diplomatic break. Each run regenerates everything from scratch and diffs against the DB: new connections inserted, existing ones updated, missing ones deactivated. Sonnet audits and removes weak ones.
 
 ### 3. INTELLIGENCE
 
-**Analyst (Agent 05)** — Produces in-depth analyses for crises with severity ≥ 7: evolution scenarios with probabilities, historical precedents, key actors, indicators to watch. Uses RAG with 8 academic documents on conflict theory, escalation, and crisis management. Only analyzes crises with new events since the last analysis. Max 3 per run. Sonnet evaluates quality — if the score is below 5, the analysis is discarded.
+**Analyst (Agent 05)** -->Produces in-depth analyses for crises with severity ≥ 7: evolution scenarios with probabilities, historical precedents, key actors, indicators to watch. Uses RAG with 8 academic documents on conflict theory, escalation, and crisis management. Only analyzes crises with new events since the last analysis. Max 3 per run. Sonnet evaluates quality; if the score is below 5, the analysis is discarded.
 
-**Verifier (Agent 06)** — Verifies the real status of crises through fresh web search. Detects resolutions, escalations, de-escalations, and media gaps (the crisis is real but the media stopped covering it). Uses RAG with academic frameworks (Fink model and PCMP) to classify the crisis phase. Max 3 verifications per day with 60 seconds pause between each.
+**Verifier (Agent 06)** --> Verifies the real status of crises through fresh web search. Detects resolutions, escalations, de-escalations, and media gaps (the crisis is real but the media stopped covering it). Uses RAG with academic frameworks (Fink model and PCMP) to classify the crisis phase. Max 3 verifications per day with 60 seconds pause between each.
 
 ### 4. META
 
-**Supervisor (Agent 07)** — Two phases. Python calculates objective metrics from 30 days of runs: success rate, error trend, input/output ratio, costs per agent. Then a single Sonnet call analyzes those numbers and looks for systemic patterns: performance drift, correlations between agents, cost anomalies, agents producing zero output. Produces health scores, verdicts, and fix recommendations for each agent.
+**Supervisor (Agent 07)** --> Two phases. Python calculates objective metrics from 30 days of runs: success rate, error trend, input/output ratio, costs per agent. Then a single Sonnet call analyzes those numbers and looks for systemic patterns: performance drift, correlations between agents, cost anomalies, agents producing zero output. Produces health scores, verdicts, and fix recommendations for each agent.
 
 ---
 
@@ -113,7 +113,7 @@ A typical full run processes 30-44 articles in ~12 minutes at a cost of ~$1.00.
 | Backend | Python 3.12 | Orchestration, validation, pipeline |
 | LLM (reasoning) | Claude Sonnet 4 | Matching, analysis, verification, audit, pattern detection |
 | LLM (classification) | Claude Haiku 4.5 | Event classification, connections, reality check |
-| Web Search | Anthropic Web Search API | Scanner and Verifier — fresh data from the web |
+| Web Search | Anthropic Web Search API | Scanner and Verifier, fresh data from the web |
 | Database | Supabase (PostgreSQL) | 12 tables, RLS, real-time subscriptions |
 | News Feed | GNews API | 5 query categories, ~40 articles per run |
 | RAG | Custom knowledge base | 8 academic documents, 109 chunks, relevance scoring |
@@ -133,43 +133,43 @@ Sonnet for tasks requiring contextual reasoning (deciding whether an event is a 
 Each active crisis is positioned on the map via the primary country's coordinates. Color indicates type (conflict, disaster, economic, political, health), size reflects severity.
 
 ### Country Relationships
-Lines connecting pairs of countries with active relationships. Each line has a type (military attack, sanction, aid, refugee flow, etc.) and a strength from 1 to 10. These relationships are regenerated every 6 hours — they are not static. If a ceasefire is signed, the connection is automatically deactivated on the next run.
+Lines connecting pairs of countries with active relationships. Each line has a type (military attack, sanction, aid, refugee flow, etc.) and a strength from 1 to 10. These relationships are regenerated every 6 hours, they are not static. If a ceasefire is signed, the connection is automatically deactivated on the next run.
 
 ### Crisis Timelines
-Each crisis has a timeline of turning points: the moments that changed its trajectory. It is not a list of all events — only the key milestones selected by the Analyst or Scanner. Max 8 entries per crisis.
+Each crisis has a timeline of turning points: the moments that changed its trajectory. It is not a list of all events, only the key milestones selected by the Analyst or Scanner. Max 8 entries per crisis.
 
 ### Deep Analyses
-For crises with severity ≥ 7, the Analyst produces a report including: evolution scenarios with estimated probabilities, comparable historical precedents, key actors, and indicators to watch. These reports are powered by RAG — the Analyst does not invent theories, it applies them from real academic frameworks (Fink, PCMP, escalation theories).
+For crises with severity ≥ 7, the Analyst produces a report including: evolution scenarios with estimated probabilities, comparable historical precedents, key actors, and indicators to watch. These reports are powered by RAG. The Analyst does not invent theories, it applies them from real academic frameworks (Fink, PCMP, escalation theories).
 
 ### System Monitor
 The Supervisor tab shows: overall pipeline health status (stable/degrading/critical), score per agent (0-100), error trends, Supervisor notes with recommendations. If an agent has fewer than 3 runs, it shows "LOW DATA" instead of a potentially misleading score.
 
 ### Monthly Verification
-The Verifier checks whether crises are still active by searching for fresh information on the web. The result can be: still active, resolved, escalation, de-escalation, or insufficient data. It also detects "media gap" — when a crisis is real but the media stopped covering it.
+The Verifier checks whether crises are still active by searching for fresh information on the web. The result can be: still active, resolved, escalation, de-escalation, or insufficient data. It also detects "media gap", when a crisis is real but the media stopped covering it.
 
 ### Status Labels
 Each crisis has a status updated by the Matcher and Verifier:
 
-- **active** — ongoing crisis, dynamic situation
-- **escalating** — worsening underway, severity increasing
-- **de_escalating** — improvement underway, signs of de-escalation
-- **stable** — persistent crisis with no significant changes
-- **resolved** — crisis concluded
+- **active** --> ongoing crisis, dynamic situation
+- **escalating** --> worsening underway, severity increasing
+- **de_escalating** --> improvement underway, signs of de-escalation
+- **stable** --> persistent crisis with no significant changes
+- **resolved** --> crisis concluded
 
 These statuses are not static. Every 6 hours the Matcher can update the status based on new events. Every month the Verifier rechecks via web search and can change it. The system also handles LLM-"invented" statuses: if Sonnet returns "potentially_de_escalating" or "worsening", Python automatically normalizes it to the correct canonical status before writing to the DB.
 
 ### Media Gap
-The Verifier detects a particular condition: the **media gap**. It occurs when a crisis is still active but the media stopped covering it. The Verifier marks `media_gap = true` — meaning the absence of news does not equal resolution. The crisis remains monitored.
+The Verifier detects a particular condition: the **media gap**. It occurs when a crisis is still active but the media stopped covering it. The Verifier marks `media_gap = true`, meaning the absence of news does not equal resolution. The crisis remains monitored.
 
 ### Dynamic Severity
-A crisis severity is not a fixed number. It is recalculated as the median of events from the last 48 hours. If 5 events arrive with severity 3 and one with severity 9, the crisis does not jump to 9 — the median stabilizes it. The system also tracks `severity_peak`: the highest value ever recorded, useful for understanding how severe the crisis was at its worst.
+A crisis severity is not a fixed number. It is recalculated as the median of events from the last 48 hours. If 5 events arrive with severity 3 and one with severity 9, the crisis does not jump to 9, the median stabilizes it. The system also tracks `severity_peak`: the highest value ever recorded, useful for understanding how severe the crisis was at its worst.
 
 ---
 
 ## RAG — Academic Knowledge Base
 ![](crisis_monitor/img/2.jpg)
 
-HASE integrates a RAG (Retrieval-Augmented Generation) system based on 8 academic documents, parsed into 109 thematic chunks. It does not use vector embeddings — it uses a custom retriever with keyword scoring.
+HASE integrates a RAG (Retrieval-Augmented Generation) system based on 8 academic documents, parsed into 109 thematic chunks. It does not use vector embeddings, it uses a custom retriever with keyword scoring.
 
 ### Documents
 
@@ -201,17 +201,17 @@ Without RAG, the Analyst would produce analyses based solely on the model's inte
 
 ### Thematic Branches
 
-The knowledge base is organized around five thematic branches that together cover the full spectrum of crisis dynamics — from individual and collective behavior to geopolitical risk and conflict management frameworks.
+The knowledge base is organized around five thematic branches that together cover the full spectrum of crisis dynamics, from individual and collective behavior to geopolitical risk and conflict management frameworks.
 
-**Crowd Psychology** — How people behave when they find themselves in a group during a crisis. Mass panic, emotional contagion, and why crowds are not chaotic but follow precise social logics. Essential for understanding what happens on the ground when an event breaks out.
+**Crowd Psychology** --> How people behave when they find themselves in a group during a crisis. Mass panic, emotional contagion, and why crowds are not chaotic but follow precise social logics. Essential for understanding what happens on the ground when an event breaks out.
 
-**Social Identity** — The psychological mechanism by which people stop reasoning as individuals and start reasoning as members of a group — ethnicity, faction, religion, party. Explains why in certain conflicts people follow leaders or take actions they would never take alone.
+**Social Identity** --> The psychological mechanism by which people stop reasoning as individuals and start reasoning as members of a group: ethnicity, faction, religion, party. Explains why in certain conflicts people follow leaders or take actions they would never take alone.
 
-**Geopolitical Risk** — The tools and indices that measure how at risk a country or region is of conflict. Systems that collect data on violence, fatalities, media tone, and political stability to signal that a situation is deteriorating.
+**Geopolitical Risk** --> The tools and indices that measure how at risk a country or region is of conflict. Systems that collect data on violence, fatalities, media tone, and political stability to signal that a situation is deteriorating.
 
-**Escalation Trajectories** — How a crisis evolves over time — whether it intensifies, stabilizes, or de-escalates. Includes crisis phases (latent → acute → chronic), behaviors that lengthen or shorten a crisis, spillover patterns between countries, and proxy wars. This is the operational core of the knowledge base.
+**Escalation Trajectories** --> How a crisis evolves over time, whether it intensifies, stabilizes, or de-escalates. Includes crisis phases (latent → acute → chronic), behaviors that lengthen or shorten a crisis, spillover patterns between countries, and proxy wars. This is the operational core of the knowledge base.
 
-**Historical Indicators** — The historical and structural signals that precede a conflict — regime type, history of instability, elite fragmentation, behavior of security forces, conflicts in peripheral areas. These are long-term indicators, not immediate events.
+**Historical Indicators** --> The historical and structural signals that precede a conflict: regime type, history of instability, elite fragmentation, behavior of security forces, conflicts in peripheral areas. These are long-term indicators, not immediate events.
 
 ---
 
@@ -220,22 +220,22 @@ The knowledge base is organized around five thematic branches that together cove
 12 tables on Supabase (PostgreSQL), divided into 4 domains:
 
 **Raw Data**
-- `raw_articles` — GNews articles with processing status
-- `cm_collection_log` — metadata for each collection (articles, API calls, cost)
+- `raw_articles` --> GNews articles with processing status
+- `cm_collection_log` --> metadata for each collection (articles, API calls, cost)
 
 **Processed Data**
-- `classified_events` — structured events with type, severity, countries, location
-- `crises` — active crises with status, severity, countries, coordinates, summary
-- `crisis_events` — event↔crisis links with severity and status over time
-- `connections` — country relationships with type, strength, direction
-- `analyses` — deep analysis reports with scenarios and precedents
-- `key_timeline` — crisis turning points
-- `verification_log` — monthly verification results with before/after
-- `validation_errors` — issues detected by validators A and B
+- `classified_events` --> structured events with type, severity, countries, location
+- `crises` --> active crises with status, severity, countries, coordinates, summary
+- `crisis_events` --> event↔crisis links with severity and status over time
+- `connections` --> country relationships with type, strength, direction
+- `analyses` --> deep analysis reports with scenarios and precedents
+- `key_timeline` --> crisis turning points
+- `verification_log` --> monthly verification results with before/after
+- `validation_errors` --> issues detected by validators A and B
 
 **Pipeline Monitoring**
-- `cm_agent_runs` — per-agent run tracking (duration, cost, input/output, errors)
-- `cm_supervisor_log` — system audit with scores, verdicts, and findings
+- `cm_agent_runs` --> per-agent run tracking (duration, cost, input/output, errors)
+- `cm_supervisor_log` --> system audit with scores, verdicts, and findings
 
 ---
 
@@ -277,15 +277,15 @@ Using Haiku for Classifier and Connector saves ~$0.60 per run compared to using 
 ### Pre-write Validation
 No data touches the database without passing Python validation. Each agent has a chain of specific checks before every INSERT:
 
-- **Severity** — clamped to 1-10 at every write point
-- **Status** — normalized from 12+ LLM variants to 5 canonical DB values
-- **Crisis type** — validated against 5 allowed values (conflict, disaster, economic, political, health)
-- **Source** — validated against DB constraint allowed values
-- **Foreign key** — crisis_id and event_id verified before every INSERT into crisis_events
-- **Country codes** — ISO-2 validated, placeholders (EU, NATO, G7, OPEC, ASEAN) remapped to first real country
+- **Severity** --> clamped to 1-10 at every write point
+- **Status** --> normalized from 12+ LLM variants to 5 canonical DB values
+- **Crisis type** --> validated against 5 allowed values (conflict, disaster, economic, political, health)
+- **Source** --> validated against DB constraint allowed values
+- **Foreign key** --> crisis_id and event_id verified before every INSERT into crisis_events
+- **Country codes** --> ISO-2 validated, placeholders (EU, NATO, G7, OPEC, ASEAN) remapped to first real country
 
 ### Cross-audits
-Every agent using an LLM has a second LLM (Sonnet) auditing the output before saving. The Classifier uses a compact corrections-only format — Sonnet doesn't rewrite everything, it only flags errors. The corrections themselves are validated: if Sonnet suggests an invalid type like "social" or "cyber", Python blocks it.
+Every agent using an LLM has a second LLM (Sonnet) auditing the output before saving. The Classifier uses a compact corrections-only format: Sonnet doesn't rewrite everything, it only flags errors. The corrections themselves are validated: if Sonnet suggests an invalid type like "social" or "cyber", Python blocks it.
 
 ### Malformed JSON Handling
 LLMs don't always produce valid JSON. Every agent has progressive fallbacks:
@@ -295,7 +295,7 @@ LLMs don't always produce valid JSON. Every agent has progressive fallbacks:
 4. Progressive trimming of trailing garbage
 5. Fallback to original unaudited output
 
-The system never crashes on malformed JSON — it degrades gracefully.
+The system never crashes on malformed JSON, it degrades gracefully.
 
 ### Rate Limit Protection
 - Verifier: 60-second pause between each verification
@@ -311,11 +311,11 @@ The system never crashes on malformed JSON — it degrades gracefully.
 
 ### DB Constraints
 The database has CHECK constraints on all critical fields. If an invalid value were to slip past all Python checks, the DB rejects it as the last line of defense:
-- `crises.status` — only 5 allowed values
-- `crises.type` — only 5 allowed values
-- `crises.source` — only 3 allowed values
-- `crisis_events.source` — only 4 allowed values
-- `severity` — between 1 and 10 (on both crises and crisis_events)
+- `crises.status` --> only 5 allowed values
+- `crises.type` --> only 5 allowed values
+- `crises.source` --> only 3 allowed values
+- `crisis_events.source` --> only 4 allowed values
+- `severity` --> between 1 and 10 (on both crises and crisis_events)
 - Foreign keys with CASCADE delete on crisis_events and connections
 
 ---
@@ -369,6 +369,6 @@ HASE currently feeds from GNews, a journalistic source that carries editorial bi
 
 The introduction of the academic RAG slows down execution times, but gives agents a richer context to evaluate situations. It is a conscious tradeoff: more time for more informed responses.
 
-Due to the probabilistic nature of LLMs and other factors, the system does not guarantee 100% stability or veracity. But it is interesting to explore how far it is possible to push — after testing it for a few days I was impressed by how it handled, analyzed, and modified parameters and variables that change over time.
+Due to the probabilistic nature of LLMs and other factors, the system does not guarantee 100% stability or veracity. But it is interesting to explore how far it is possible to push. After testing it for a few days I was impressed by how it handled, analyzed, and modified parameters and variables that change over time.
 
-The Supervisor (Agent 07) does not provide return feedback to other agents — it is only an external observer that evaluates the overall system health. The choice was deliberate: I did not want to increase call costs or introduce additional verifier agents. I preferred having a general overview and a working system with the current pieces, rather than a more complex but unstable architecture.
+The Supervisor (Agent 07) does not provide return feedback to other agents. It is only an external observer that evaluates the overall system health. The choice was deliberate: I did not want to increase call costs or introduce additional verifier agents. I preferred having a general overview and a working system with the current pieces, rather than a more complex but unstable architecture.

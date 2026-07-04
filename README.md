@@ -166,7 +166,7 @@ A crisis severity is not a fixed number. It is recalculated as the median of eve
 
 ---
 
-## RAG — Academic Knowledge Base
+## RAG Academic Knowledge Base
 ![](crisis_monitor/img/2.jpg)
 
 HASE integrates a RAG (Retrieval-Augmented Generation) system based on 8 academic documents, parsed into 109 thematic chunks. It does not use vector embeddings, it uses a custom retriever with keyword scoring.
